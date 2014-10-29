@@ -1,0 +1,51 @@
+body {
+
+background-color:#f1f1f1;
+font-family: georgia,sans-serif;
+color:#333;
+margin:0;
+padding:0;
+
+}
+
+#wrapper {
+
+width:960px;
+background-color:#f8f8f8;
+margin:0 auto;
+border-left:1px solid #ccc;
+border-right:1px solid #ccc;
+
+}
+
+#wheader {
+
+width:400px;
+height:50px;
+position: absolute;
+left: 0px;
+top: 0px;
+border-bottom:1px solid #ccc;
+border-top:1px solid #ccc;
+font-family: Impact, Charcoal, sans-serif;
+font-size: 150%;
+color: #FF0000;
+background-color: #000000;
+
+}
+
+#wheader h2 {
+
+font-family: 'Lucida Console', Monaco, monospace;
+font-size: 70%;
+
+}
+
+#stats h1 {
+
+position: relative;
+bottom: -75px;
+font-family: 'Lucida Console', Monaco, monospace;
+font-size: 125%;
+
+}
