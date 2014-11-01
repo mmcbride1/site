@@ -1,10 +1,11 @@
 <?php 
 
-include('someint.php');
+include('pingsite.php');
+//include('someint.php');
 
 class RequestQueue {
 
-   function add() {
+   function add($obj) {
 
       define('QUEUE', 21671);
 
@@ -12,7 +13,7 @@ class RequestQueue {
 
       //msg_send($q, 1, $m);
 
-      $obj = new SomeInt;
+      //$obj = new SomeInt;
 
       $obj->name = 'foo';
 
@@ -34,9 +35,11 @@ class RequestQueue {
 
    }
 
+   /**
+
    function work() {
 
-//      define('QUEUE', 21671);
+      define('QUEUE', 21671);
 
       $q = msg_get_queue(QUEUE);
 
@@ -50,13 +53,13 @@ class RequestQueue {
 
          // * * //
 
-         echo "Message pulled from queue - id:{$msg->id}, name:{$msg->name} \n";
+//         echo "Message pulled from queue - id:{$msg->id}, name:{$msg->name} \n";
 
          // * task here * //
 
-         $t = $msg->get();
+         $msg->set();
 
-         file_put_contents("test.txt", "$t\n", FILE_APPEND);
+         $msg->window();
 
          $msg_type = NULL;
          
@@ -65,13 +68,13 @@ class RequestQueue {
       }
 
    }
-
+*/
 }
 
-$obj = new RequestQueue();
+//$var = new RequestQueue();
 
-$obj->add();
+//$var->add('www.google.com');
 
-$obj->add();
+//$var->add(new PingSite('www.google.com'));
 
-$obj->work();
+//$var->work();

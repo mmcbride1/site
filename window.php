@@ -2,11 +2,12 @@
 
 <?php
 
-  #session_start();
+//  include('queue.php');
+  include('work.php');
 
   // include main class //
 
-  include('pingsite.php');
+//  include('pingsite.php');
 
   /*
    * Just include a simple
@@ -19,6 +20,12 @@
      session_start();
        
      $sts = $_SESSION['web'];
+
+//     $r = new WorkQ();
+
+//     $r->work();
+
+     #$sts->window();
 
      return $sts->display();
 

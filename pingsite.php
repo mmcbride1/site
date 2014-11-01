@@ -1,5 +1,7 @@
 <?php
 
+//include('queue.php');
+
 class PingSite {
 
    var $http;
@@ -14,9 +16,20 @@ class PingSite {
 
    public function __construct($addr) {
 
+//      $q = new RequestQueue();
+
       $this->http = $addr;
-      $this->curl = $this->getheader();
+      
+     // $this->curl = $this->getheader();
       $this->window();
+
+   }
+
+   public function set() {
+
+      $this->curl = $this->getheader();
+
+      return $this->curl;
 
    }
 
@@ -99,5 +112,11 @@ class PingSite {
    }
 
 }
+
+//$obj = new PingSite('www.google.com');
+
+//$obj->set();
+
+//print $obj->gettime();
 
 ?>
