@@ -30,7 +30,7 @@
 
 <?php
 
-  include('queue.php');
+  include('pingsite.php');
 
   /*
    * Just include a simple
@@ -46,11 +46,7 @@
  
         $url = $_POST['url'];
 
-        $req = new RequestQueue();
-
         $web = new PingSite($url);
-
-        $req->add($web);
 
         $_SESSION['web'] = $web;
 

@@ -2,12 +2,13 @@
 
 <?php
 
-//  include('queue.php');
-  include('work.php');
-
   // include main class //
 
-//  include('pingsite.php');
+  include('pingsite.php');
+
+  session_start();
+
+  $sts = $_SESSION['web'];
 
   /*
    * Just include a simple
@@ -17,17 +18,13 @@
 
   function stats() {
 
-     session_start();
-       
-     $sts = $_SESSION['web'];
+     return $GLOBALS['sts']->display();
 
-//     $r = new WorkQ();
+  }
 
-//     $r->work();
+  function scale() { 
 
-     #$sts->window();
-
-     return $sts->display();
+     return $GLOBALS['sts']->infotime();
 
   }
 
@@ -41,11 +38,21 @@
 
 <?php include('includes/window_header.php') ?>
 
-<div id="stats">
+<div id="timemsg">
 
-<h1><?php echo stats(); ?></h1>
+<?php echo scale(); ?>
 
 </div>
+
+<div id="stats">
+
+<p>statistics:</p>
+
+<?php echo stats(); ?>
+
+</div>
+
+<?php include('includes/explain.php') ?>
 
    </body>
 

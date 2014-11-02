@@ -16,4 +16,6 @@ $navmessage = "Quick Web Monitor";
 
 $footer = 'Copyright &copy; 2014 WontBlinkBox';
 
+/* response explaination */
+
 ?>

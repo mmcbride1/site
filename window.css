@@ -41,11 +41,39 @@ font-size: 70%;
 
 }
 
+#stats p {
+
+position: relative;
+bottom: -100px;
+color: #DAA520;
+font-size: 125%;
+
+}
+
 #stats h1 {
 
 position: relative;
-bottom: -75px;
+bottom: -100px;
 font-family: 'Lucida Console', Monaco, monospace;
 font-size: 125%;
 
 }
+
+#timemsg h3 {
+
+position: relative;
+bottom: -75px;
+font-family: "Arial Black", Gadget, sans-serif;
+font-style: italic;
+font-size: 100%;
+
+}
+
+#explain p {
+
+position: relative;
+bottom: -125px;
+font-size: 75%;
+
+}
+

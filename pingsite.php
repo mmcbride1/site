@@ -1,11 +1,12 @@
 <?php
 
-//include('queue.php');
+include('codes.php');
 
 class PingSite {
 
    var $http;
    var $curl;
+   var $conf;
 
    /**
     * Constructor 
@@ -16,20 +17,24 @@ class PingSite {
 
    public function __construct($addr) {
 
-//      $q = new RequestQueue();
-
       $this->http = $addr;
-      
-     // $this->curl = $this->getheader();
+      $this->conf = $this->getcf();
+      $this->curl = $this->getheader();
       $this->window();
 
    }
 
-   public function set() {
+   /**
+    * Load the 
+    * configuration
+    * file 
+    **/
 
-      $this->curl = $this->getheader();
+   private function getcf() {
 
-      return $this->curl;
+      $ini = parse_ini_file('params.ini');
+
+      return $ini;
 
    }
 
@@ -64,15 +69,29 @@ class PingSite {
 
    }
 
+   /**
+    * Simply reiterates
+    * the address 
+    * associated with 
+    * the request 
+    **/
+
    public function geturli() {
 
       $u = $this->curl['url'];
 
-      $u = split("/", $u);
+      $u = explode("/", $u);
 
       return $u[2];
 
    }
+
+   /**
+    * Gets the http
+    * total response 
+    * time from the 
+    * request 
+    **/
 
    public function gettime() {
 
@@ -82,6 +101,12 @@ class PingSite {
 
    }
 
+   /**
+    * Gets the http
+    * code from the 
+    * request response
+    **/
+
    public function getcode() {
 
       $c = $this->curl['http_code'];
@@ -90,11 +115,84 @@ class PingSite {
 
    }
 
+   /**
+    * Delivers the 
+    * message to 
+    * accompany the 
+    * response time along
+    * with a indication
+    * image 
+    **/
+
+   public function indicator($v) {
+
+      $idlt = $this->conf['idlt'];
+      $img1 = $this->conf['img1'];
+      $img2 = $this->conf['img2'];
+ 
+      if ($v > $idlt) {
+
+         $s = $this->conf['bad'].($v - $idlt)." ".$img2;
+    
+      }
+
+      else if ($v < $idlt) {
+
+         $s = $this->conf['good'].($idlt - $v)." ".$img1;
+
+      }
+
+      else {
+
+         $s = "ideal $img1";
+
+      }
+
+      return $s;
+
+   }
+
+   /**
+    * Retrieves the 
+    * information to 
+    * accompany the 
+    * request http
+    * code 
+    **/
+
+   public function codeinfo() {
+ 
+      $c = new StatusCodes();
+
+      $l = $c->getcodes();
+
+      $s = $this->getcode();
+
+      if(array_key_exists($s, $l)) {
+
+         return "$s $l[$s]";
+
+      }
+
+      else {
+
+         return $this->conf['code'];
+
+      }
+
+   }
+
+   /**
+    * Displays the 
+    * collection of 
+    * statistics 
+    **/
+
    public function display() {
 
       $u = $this->geturli();
       $t = $this->gettime();
-      $c = $this->getcode();
+      $c = self::codeinfo();
 
       echo '<h1>'.$u.'</h1>';
       echo '<h1>time: '.$t.'</h1>';
@@ -104,6 +202,37 @@ class PingSite {
 
    }
 
+   /**
+    * Delivers the 
+    * response time 
+    * and whether it is
+    * within the ideal 
+    * range
+    **/
+
+   public function infotime() {
+     
+      $t = $this->gettime();
+
+      if($this->getcode() == '200') {
+      
+         $n = self::indicator($t);
+
+         echo '<h3>'.$n.'</h3>';
+
+      }
+
+      return;
+
+   }
+
+   /**
+    * Delivers the pop-up
+    * window that will 
+    * display the response 
+    * statistics 
+    **/
+
    public function window() {
 
       echo '<script src="popup2.js"></script>';
@@ -112,11 +241,5 @@ class PingSite {
    }
 
 }
-
-//$obj = new PingSite('www.google.com');
-
-//$obj->set();
-
-//print $obj->gettime();
 
 ?>
