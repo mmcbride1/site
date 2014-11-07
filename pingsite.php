@@ -183,6 +183,21 @@ class PingSite {
    }
 
    /**
+    * Determines
+    * whether given
+    * address is an
+    * actual website
+    **/
+
+   private function isurl() {
+
+      $u = $this->getcode();
+
+      return $u != '0';
+
+   }
+
+   /**
     * Displays the 
     * collection of 
     * statistics 
@@ -190,13 +205,26 @@ class PingSite {
 
    public function display() {
 
-      $u = $this->geturli();
-      $t = $this->gettime();
-      $c = self::codeinfo();
+      if ($this->isurl()) {
 
-      echo '<h1>'.$u.'</h1>';
-      echo '<h1>time: '.$t.'</h1>';
-      echo '<h1>code: '.$c.'</h1>';
+         $m1 = $this->conf['t'];
+         $m2 = $this->conf['c'];
+
+         $u = $this->geturli();
+         $t = $this->gettime();
+         $c = self::codeinfo();
+
+         echo '<h1>'.$u.'</h1>';
+         echo '<h1>'.$m1.$t.'</h1>';
+         echo '<h1>'.$m2.$c.'</h1>';
+
+      }
+
+      else {
+
+         echo $this->conf['404'];
+
+      }
 
       return;
 
@@ -214,7 +242,7 @@ class PingSite {
      
       $t = $this->gettime();
 
-      if($this->getcode() == '200') {
+      if($this->isurl()) {
       
          $n = self::indicator($t);
 

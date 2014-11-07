@@ -1,10 +1,10 @@
 <?php
 
 include('codes.php');
-/*
+
      function getheader() {
 
-      $beat = "http://somebullshitsite.com";
+      $beat = "http://vgkjbnjnbgojtnbo4je";
 
       $ch = curl_init();
 
@@ -25,32 +25,48 @@ include('codes.php');
 
    }
 
+      function geturli($var) {
+
+      $u = $var['url'];
+
+      $u = explode("/", $u);
+
+      return $u[2];
+
+   }
+
+
+      function isurl($var) {
+
+      $u = geturli($var);
+
+      return @fopen($u, 'r');
+
+   }
+
+
 $var = getheader();
+ 
 
-print_r($var);
+if(isurl($var)) {
 
-*/
-
-//$ini = parse_ini_file("params.ini");
-
-//print $ini['good'];
-
-$n = '888';
-
-$c = new StatusCodes();
-
-$a = $c->getcodes();
-
-if(array_key_exists($n, $a)) {
-
-print("$n:$a[$n]");
+echo "true";
 
 }
 
 else {
 
-print "code not found";
+echo "false";
 
 }
+
+print_r($var);
+
+
+
+//$ini = parse_ini_file("params.ini");
+
+//print $ini['good'];
+
 
 ?>

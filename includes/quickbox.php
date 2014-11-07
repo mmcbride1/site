@@ -18,7 +18,7 @@
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="test"></td>
+<td><input type="submit" name="Submit" value="ping"></td>
 </tr>
 </table>
 </td>
@@ -34,13 +34,18 @@
 
   /*
    * Just include a simple
-   * alert box with the 
-   * site params 
+   * window with the 
+   * site params and 
+   * additional info
    */
 
   function takeoff() {
 
+     /* start session */
+
      session_start();
+
+     /* grab posted address */
 
      if(isset($_POST['url'])) {
  

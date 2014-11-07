@@ -77,3 +77,10 @@ font-size: 75%;
 
 }
 
+#footer {
+
+position: relative;
+bottom: -150px;
+
+}
+
