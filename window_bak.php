@@ -60,22 +60,6 @@
 
 </div>
 
-<?php
-
-/* get load time */
-
-$t = $GLOBALS['sts']->gettime();
-
-/* display tips if needed */
-
-if($t > 7) {
-
-   include('includes/tips.php');
-
-} 
-
-?>
-
 <?php include('includes/explain.php') ?>
 
 <?php include('includes/footer.php') ?>

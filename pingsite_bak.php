@@ -207,13 +207,16 @@ class PingSite {
 
       if ($this->isurl()) {
 
+         $m1 = $this->conf['t'];
+         $m2 = $this->conf['c'];
+
          $u = $this->geturli();
          $t = $this->gettime();
          $c = self::codeinfo();
 
          echo '<h1>'.$u.'</h1>';
-         echo '<h1>loading time: '.$t.'</h1>';
-         echo '<h1>response code: '.$c.'</h1>';
+         echo '<h1>'.$m1.$t.'</h1>';
+         echo '<h1>'.$m2.$c.'</h1>';
 
       }
 

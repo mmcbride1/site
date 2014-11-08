@@ -126,25 +126,36 @@ class PingSite {
 
    public function indicator($v) {
 
+      // * config * //
+
       $idlt = $this->conf['idlt'];
       $img1 = $this->conf['img1'];
       $img2 = $this->conf['img2'];
- 
-      if ($v > $idlt) {
+      $img3 = $this->conf['img3'];
 
-         $s = $this->conf['bad'].($v - $idlt)." ".$img2;
-    
-      }
+      // * gauge response * //
 
-      else if ($v < $idlt) {
+      if ($v >= 0 && $v <= $idlt) {
 
          $s = $this->conf['good'].($idlt - $v)." ".$img1;
 
       }
 
+      else if ($v > $idlt && $v <= 7) {
+
+         $s = $this->conf['bad'].($v - $idlt)." ".$img3;
+    
+      }
+
+      else if ($v > 7 && $v <= 15) {
+
+         $s = $this->conf['bad'].($idlt - $v)." ".$img2;
+
+      }
+
       else {
 
-         $s = "ideal $img1";
+         $s = $this->conf['crit']." ".$img4;
 
       }
 

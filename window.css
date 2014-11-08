@@ -69,6 +69,18 @@ font-size: 100%;
 
 }
 
+#tips h2 {
+
+position: relative;
+bottom: -113px;
+font-size: 100%;
+width: 500px;
+height: 23px; 
+border: 1px solid black;
+background-color: #FFFF00;
+
+}
+
 #explain p {
 
 position: relative;

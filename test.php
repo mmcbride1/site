@@ -44,23 +44,60 @@ include('codes.php');
 
    }
 
+      function indicator($v) {
 
-$var = getheader();
+      $v = (int) $v
+
+      $good = range(0, 3);
+      $avrg = range(4, 7);
+      $over = range(8, 15);
+
+      if (in_array($v, $good)) {
+
+         //$s = print below message, good image;
+
+      }
+
+      else if (in_array($v, $avrg)) {
+
+         //$s = print above message, average image
+
+      }
+
+      else if (in_array($v, $over)){
+
+         //$s = print above message, bad image plus tips
+
+      }
+
+      else {
+
+      //$s = print critical message, critical image plus tips
+
+      }
+
+      return $s;
+
+   }
+
+
+
+//$var = getheader();
  
 
-if(isurl($var)) {
+//if(isurl($var)) {
 
-echo "true";
+//echo "true";
 
-}
+//}
 
-else {
+//else {
 
-echo "false";
+//echo "false";
 
-}
+//}
 
-print_r($var);
+//print_r($var);
 
 
 
