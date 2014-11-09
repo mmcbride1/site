@@ -1,6 +1,6 @@
 <?php
 
-include('codes.php');
+include('status.php');
 
 class PingSite {
 
