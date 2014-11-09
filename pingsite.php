@@ -133,7 +133,7 @@ class PingSite {
       $img2 = $this->conf['img2'];
       $img3 = $this->conf['img3'];
 
-      // * gauge response * //
+      // * check response * //
 
       if ($v >= 0 && $v <= $idlt) {
 
