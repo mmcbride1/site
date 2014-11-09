@@ -1,4 +1,4 @@
-<script src="popup2.js"></script> 
+<script src="window.js"></script> 
 
 <div id="box">
 
