@@ -10,6 +10,8 @@
 
   session_start();
 
+  /* get the req object */
+
   $sts = $_SESSION['web'];
 
   /**
