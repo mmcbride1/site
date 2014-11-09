@@ -17,7 +17,7 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <title>WontBlinkBox</title>
 
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="images/favicon.ico" />
 
 </head>
 
