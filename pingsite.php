@@ -149,7 +149,7 @@ class PingSite {
 
       else if ($v > 7 && $v <= 15) {
 
-         $s = $this->conf['bad'].($idlt - $v)." ".$img2;
+         $s = $this->conf['bad'].($v - $idlt)." ".$img2;
 
       }
 
