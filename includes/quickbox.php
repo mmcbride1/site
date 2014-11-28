@@ -1,5 +1,3 @@
-<script src="window.js"></script> 
-
 <div id="box">
 
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
@@ -61,4 +59,8 @@
 
 ?>
 
+<div id="takeoff">
+
 <h1><?php takeoff(); ?></h1>
+
+</div>

@@ -1,101 +1,61 @@
-body {
+#takeoff {
 
-background-color:#f1f1f1;
-font-family: georgia,sans-serif;
-color:#333;
-margin:0;
-padding:0;
-
-}
-
-#wrapper {
-
-width:960px;
+width:375px;
 background-color:#f8f8f8;
-margin:0 auto;
-border-left:1px solid #ccc;
-border-right:1px solid #ccc;
-
-}
-
-#wheader {
-
-width:400px;
-height:50px;
-position: absolute;
-left: 0px;
-top: 0px;
-border-bottom:1px solid #ccc;
-border-top:1px solid #ccc;
-font-family: Impact, Charcoal, sans-serif;
-font-size: 150%;
-color: #FF0000;
-background-color: #000000;
-
-}
-
-#wheader h2 {
-
-font-family: 'Lucida Console', Monaco, monospace;
-font-size: 70%;
-
-}
-
-#stats p {
-
 position: relative;
-bottom: -100px;
-color: #DAA520;
-font-size: 125%;
-padding-left: 0.25cm;
+right: -300px;
+bottom: 200px;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-left: 2px solid black;
+border-right: 2px solid black;
+margin-left: auto;
+margin-right: auto;
+display:inline-block;
 
 }
 
-#stats h1 {
+#takeoff p {
 
-position: relative;
-bottom: -100px;
-font-family: 'Lucida Console', Monaco, monospace;
-font-size: 125%;
-padding-left: 0.25cm;
+margin-left: auto;
+margin-right: auto;
 
 }
 
 #timemsg h3 {
 
 position: relative;
-bottom: -75px;
+bottom: 10px;
 font-family: "Arial Black", Gadget, sans-serif;
 font-style: italic;
-font-size: 100%;
-padding-left: 0.25cm;
+font-size: 80%;
+padding-left: 0.05cm;
 
 }
 
-#tips h2 {
+#stats h1 {
 
-position: relative;
-bottom: -113px;
-font-size: 100%;
-font-style: italic;
-color: #FF6633;
-padding-left: 0.25cm;
+font-size: 80%;
+font-family: ‘Arial Black’, Gadget, sans-serif;
 
 }
 
 #explain p {
 
 position: relative;
-bottom: -125px;
-font-size: 75%;
-padding-left: 0.25cm;
+bottom: -5px;
+font-size: 50%;
+padding-left: 0.05cm;
 
 }
 
-#footer {
+#tips h3 {
 
 position: relative;
-bottom: -150px;
+bottom: 2px;
+font-size: 80%;
+font-style: italic;
+color: #FF6633;
+padding-left: 0.05cm;
 
 }
-

@@ -46,8 +46,6 @@
 
       <!--<div id="wrapper">-->
 
-<?php include('includes/window_header.php') ?>
-
 <div id="timemsg">
 
 <?php echo scale(); ?>
@@ -79,8 +77,6 @@ if($t > 7) {
 ?>
 
 <?php include('includes/explain.php') ?>
-
-<?php include('includes/footer.php') ?>
 
 <?php session_destroy(); ?>
 

@@ -267,7 +267,7 @@ class PingSite {
    }
 
    /**
-    * Delivers the pop-up
+    * Delivers the stats
     * window that will 
     * display the response 
     * statistics 
@@ -275,8 +275,15 @@ class PingSite {
 
    public function window() {
 
-      echo '<script src="popup2.js"></script>';
-      echo '<script>openRequestedPopup();</script>';
+      /* create window */
+
+      echo '<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>';
+      echo '<script>';
+      echo '$(document).ready(function() {';
+      echo '$("#takeoff").load("win.php");';
+      echo '$.ajaxSetup({ cache: false });';
+      echo '});';
+      echo '</script>';
  
    }
 

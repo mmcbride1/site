@@ -33,7 +33,7 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <div id="content">
 
-<h1>Ping your website</h1>
+<h2>Ping your website</h2>
 
 <!--<p>quick check your site's status and response</p>-->
 

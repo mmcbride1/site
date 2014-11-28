@@ -10,7 +10,7 @@ padding:0;
 
 #wrapper {
 
-width:960px;
+width:1060px;
 background-color:#f8f8f8;
 margin:0 auto;
 border-left:1px solid #ccc;
@@ -20,7 +20,7 @@ border-right:1px solid #ccc;
 
 #header {
 
-width:960px;
+width:1060px;
 height:135px;
 margin:0 auto;
 margin-bottom:1px;
@@ -40,7 +40,7 @@ padding:10px;
 
 #nav {
 
-width:960px;
+width:1060px;
 height:40px;
 border-bottom:1px solid #ccc;
 background-color: #000000;
@@ -48,7 +48,6 @@ font-family: "Trebuchet MS", Helvetica, sans-serif;
 color: #FFFFFF;
 
 }
-
 
 #nav a {
 
@@ -70,13 +69,17 @@ height:80px;
 #content {
 
 width:675px;
+height:250px;
 float:left;
-padding:10px;
+padding:60px;
 
 }
 
-#content h1 {
+#content h2 {
 
+position: relative;
+top:-60px;
+right:50px;
 padding:2px;
 font-family: ‘Arial Black’, Gadget, sans-serif;
 font-size: 100%;
@@ -92,10 +95,12 @@ font-size: 75%;
 
 #box {
 
-float:left;
+position:relative;
+top:-50px;
+right:240px;
+margin-bottom:25px;
 
 }
-
 
 #sidebar {
 
@@ -120,16 +125,10 @@ list-style:none;
 
 }
 
-#sidebar h3 {
-
-
-
-}
-
 #footer {
 
 clear:both;
-width:960px;
+width:1060px;
 height:135px;
 border-top:1px solid #ccc;
 border-bottom:1px solid #ccc;
