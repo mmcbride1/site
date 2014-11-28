@@ -132,6 +132,7 @@ class PingSite {
       $img1 = $this->conf['img1'];
       $img2 = $this->conf['img2'];
       $img3 = $this->conf['img3'];
+      $img4 = $this->conf['img4'];
 
       // * check response * //
 

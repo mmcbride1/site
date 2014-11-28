@@ -23,6 +23,8 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
    <body>
 
+      <?php include_once('includes/analyticstracking.php') ?>
+
       <div id="wrapper">
 
 <?php include('includes/header.php'); ?>
