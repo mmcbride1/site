@@ -35,8 +35,6 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <h2>Ping your website</h2>
 
-<!--<p>quick check your site's status and response</p>-->
-
 <?php include('includes/quickbox.php'); ?>
 
 </div> <!-- end #content -->

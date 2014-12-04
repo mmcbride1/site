@@ -9,6 +9,7 @@ border-top: 2px solid black;
 border-bottom: 2px solid black;
 border-left: 2px solid black;
 border-right: 2px solid black;
+border-style: groove;
 margin-left: auto;
 margin-right: auto;
 display:inline-block;
@@ -19,6 +20,7 @@ display:inline-block;
 
 margin-left: auto;
 margin-right: auto;
+padding-left: 0.05cm;
 
 }
 
@@ -37,6 +39,7 @@ padding-left: 0.05cm;
 
 font-size: 80%;
 font-family: ‘Arial Black’, Gadget, sans-serif;
+padding-left: 0.05cm;
 
 }
 
@@ -57,5 +60,12 @@ font-size: 80%;
 font-style: italic;
 color: #FF6633;
 padding-left: 0.05cm;
+
+}
+
+#stats p {
+
+color: #b0c4de;
+font-weight: bold;
 
 }

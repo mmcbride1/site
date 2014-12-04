@@ -280,7 +280,7 @@ class PingSite {
       echo '<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>';
       echo '<script>';
       echo '$(document).ready(function() {';
-      echo '$("#takeoff").load("win.php");';
+      echo '$("#takeoff").load("window.php");';
       echo '$.ajaxSetup({ cache: false });';
       echo '});';
       echo '</script>';

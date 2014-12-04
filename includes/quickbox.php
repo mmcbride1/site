@@ -1,3 +1,20 @@
+<link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="spin.css" media="screen" />
+
+<script type="text/javascript">
+
+    function wait(target) {
+
+       document.getElementById('takeoff').style.visibility = 'hidden';
+
+       document.getElementById(target).style.display = 'block';
+
+       return false;
+
+    }
+
+</script>
+
 <div id="box">
 
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
@@ -16,7 +33,7 @@
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="ping"></td>
+<td><input type="submit" name="Submit" value="ping" onclick="wait('spinner');"></td>
 </tr>
 </table>
 </td>
@@ -58,6 +75,10 @@
   }
 
 ?>
+
+<div id="spinner" class="spinner" style="display:none;">
+
+</div>
 
 <div id="takeoff">
 
