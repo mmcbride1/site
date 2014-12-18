@@ -5,3 +5,21 @@ right: -450px;
 bottom: 100px;
 
 }
+
+#msg h2 {
+
+position: relative;
+right: -305px;
+bottom: 100px;
+font-family: "Courier New", Courier, monospace;
+
+}
+
+#msg p {
+
+position: relative;
+right: -370px;
+bottom: 90px;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+}

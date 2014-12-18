@@ -16,6 +16,24 @@ display:inline-block;
 
 }
 
+#ping {
+
+width:380px;
+background-color:#f8f8f8;
+position: relative;
+right: -300px;
+bottom: 200px;
+border-top: 5px solid black;
+border-bottom: 5px solid black;
+border-left: 5px solid black;
+border-right: 5px solid black;
+border-style: groove; 
+margin-left: auto;
+margin-right: auto;
+display:inline-block;
+
+}
+
 #takeoff p {
 
 margin-left: auto;
@@ -67,5 +85,13 @@ padding-left: 0.05cm;
 
 color: #b0c4de;
 font-weight: bold;
+
+}
+
+#pingstat h3 {
+
+font-size: 75%;
+font-family: "Courier New", Courier, monospace;
+padding-left: 0.05cm;
 
 }
