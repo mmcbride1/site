@@ -140,10 +140,7 @@
 
         else {
 
-           echo "<div id='msg'>";
-           echo "<h2>request not valid</h2>";
-           echo "<p>please try again!</p>";
-           echo "</div>";
+           include('includes/invalid.php');
 
            $web = NULL;
 
