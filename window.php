@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="window.css" media="screen" />
-
 <?php
 
   /* include main class */

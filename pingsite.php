@@ -278,6 +278,8 @@ class PingSite {
       /* create window */
 
       echo '<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>';
+      echo '<script src="window.js"></script>';
+      echo "<script>loadStyle('window.css');</script>";
       echo '<script>';
       echo '$(document).ready(function() {';
       echo '$("#takeoff").load("window.php");';
