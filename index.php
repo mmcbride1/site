@@ -41,6 +41,8 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <?php include('includes/sidebar.php'); ?>
 
+<?php include('includes/noscript.php'); ?>
+
 <?php include('includes/footer.php'); ?>
 
    </body>

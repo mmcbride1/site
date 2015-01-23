@@ -125,6 +125,18 @@ list-style:none;
 
 }
 
+#disabled h3 {
+
+position: absolute;
+border: 1px solid #f8f8f8;
+background-color:lightblue;
+width: 1058px;
+top: 520px;
+font-family: 'Raleway', sans-serif;
+text-align: center;
+
+}
+
 #footer {
 
 clear:both;
