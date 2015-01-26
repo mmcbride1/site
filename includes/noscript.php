@@ -2,10 +2,10 @@
 
 <div id="disabled" class="boxed">
 
-<h3><noscript><span style="color: #FF0000">Error:</span>
+<noscript><h3><span style="color: #FF0000">Error:</span>
 
 to use this service, please enable JavaScript
 
-</noscript></h3>
+</h3></noscript>
 
 </div>
