@@ -13,6 +13,8 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <meta name="author" content="" />
 
+<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
 <title>WontBlinkBox</title>

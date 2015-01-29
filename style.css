@@ -13,8 +13,8 @@ padding:0;
 width:1060px;
 background-color:#f8f8f8;
 margin:0 auto;
-border-left:1px solid #ccc;
-border-right:1px solid #ccc;
+border-left:2px solid #9900CC;
+border-right:2px solid #9900CC;
 
 }
 
@@ -24,11 +24,11 @@ width:1060px;
 height:135px;
 margin:0 auto;
 margin-bottom:1px;
-border-bottom:1px solid #ccc;
-border-top:1px solid #ccc;
-font-family: Impact, Charcoal, sans-serif;
+border-bottom:2px solid #9900CC;
+border-top:2px solid #9900CC;
+font-family: 'Play', sans-serif;
 font-size: 150%;
-background-color: #b0c4de;
+background-color: #FFFF00;
 
 }
 
@@ -142,13 +142,15 @@ text-align: center;
 clear:both;
 width:1060px;
 height:135px;
-border-top:1px solid #ccc;
-border-bottom:1px solid #ccc;
+border-top:2px solid #9900CC;
+border-bottom:2px solid #9900CC;
+background-color: #FFFF00;
 
 }
 
 #footer p {
 
 padding:10px;
+font-family: 'Play', sans-serif;
 
 }

@@ -2,7 +2,7 @@
 
 /* header */
 
-$heading = 'WontBlinkBox';
+$heading = 'Wont<span style="color: #9900CC">Blink</span>Box <img src="images/favicon.ico" style="width:40px;height:40px">';
 
 /* quick stats header */
 
