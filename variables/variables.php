@@ -24,4 +24,12 @@ $purpose = 'Use a remote source, optimized for networking, to send requests to y
 
 $invalid = 'Please enter a valid website address, or to ping your server, enter a valid ip address.';
 
+/* registration messages */
+
+$registermsg2 = '<b>Sign up</b> to have your website or app server monitored on a regular basis. <b>Receive email updates</b> whenever site responses are slow or your application server becomes unreachable.';
+
+$registermsg3 = 'Enter up to <b>five websites</b> or app servers to monitor. WontBlinkBox will track these addresses without rest 24 hours a day, 7 days a week.';
+
+$registermsg1 = 'WontBlinkBox services are absolutely <b>FREE</b>.  Know immediately when a website or server is under-performing and say goodbye to costly gaps in site traffic or usability.';
+
 ?>

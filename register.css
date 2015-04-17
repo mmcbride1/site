@@ -1,0 +1,205 @@
+body {
+
+background-color:#f1f1f1;
+font-family:georgia,sans-serif;
+color:#333;
+margin:0;
+padding:0;
+
+}
+
+#wrapper {
+
+width:1060px;
+background-color:#f8f8f8;
+margin:0 auto;
+border-left:2px solid #9900CC;
+border-right:2px solid #9900CC;
+
+}
+
+#header {
+
+width:1060px;
+height:135px;
+margin:0 auto;
+margin-bottom:1px;
+border-bottom:2px solid #9900CC;
+border-top:2px solid #9900CC;
+font-family:'Play', sans-serif;
+font-size:150%;
+background-color:#FFFF00;
+
+}
+
+#header h2 {
+
+padding:10px;
+
+}
+
+#nav {
+
+width:1060px;
+height:40px;
+border-bottom:1px solid #ccc;
+background-color:#000000;
+font-family:"Trebuchet MS", Helvetica, sans-serif;
+color:#FFFFFF;
+
+}
+
+#nav a {
+
+display:inline;
+padding:10px;
+text-decoration:none;
+background-color:#f1f1f1;
+
+}
+
+#nav a:hover {
+
+background-color:#bababa;
+height:80px;
+
+}
+
+#content {
+
+position:relative;
+width:1060px;
+height:450px;
+
+}
+
+#content h3 {
+
+font-size:125%;
+font-family:'Inconsolata';
+
+}
+
+#regboxcontainer {
+
+position:relative;
+width:350px;
+height:250px;
+background-color:#FFFF00;
+border:1px solid black;
+left:10px;
+top:30px;
+
+}
+
+#registerbox {
+
+position:absolute;
+border:15px solid #FFFF00;
+top:10px;
+left:10px;
+outline:3px solid #000000;
+
+}
+
+#regbox1 {
+
+position:absolute;
+width:400px;
+height:100px;
+right:50px;
+bottom:37.5%;
+border:2px solid;
+border-radius:25px;
+border-color:#0099FF;
+font-family:'Exo', sans-serif;
+background-color:#FF6600;
+padding:10px;
+
+}
+
+#regbox1 img {
+
+position:absolute;
+left:-90px;
+bottom:-130px;
+
+}
+
+#regbox2 {
+
+position:absolute;
+width:400px;
+height:100px;
+right:50px;
+bottom:70%;
+border:2px solid;
+border-radius:25px;
+border-color:#FF6600;
+font-family:'Exo', sans-serif;
+background-color:#66FF99;
+padding:10px;
+
+}
+
+#regbox2 img {
+
+position:absolute;
+left:-85px;
+bottom:-125px;
+
+}
+
+#regbox3 {
+
+position:absolute;
+width:400px;
+height:100px;
+right:50px;
+bottom:5%;
+border:2px solid;
+border-radius:25px;
+border-color:#66FF99;
+font-family:'Exo', sans-serif;
+background-color:#0099FF;
+padding:10px;
+
+}
+
+#regbox3 img {
+
+position:absolute;
+left:-85px;
+bottom:315px;
+
+}
+
+#user {
+
+position:relative;
+width:320px;
+left:10px;
+bottom:-350px;
+font-size:12px;
+color:red;
+display:none;
+
+}
+
+#footer {
+
+clear:both;
+width:1060px;
+height:135px;
+border-top:2px solid #9900CC;
+border-bottom:2px solid #9900CC;
+background-color: #FFFF00;
+
+}
+
+#footer p {
+
+padding:10px;
+font-family:'Play', sans-serif;
+
+}
