@@ -93,7 +93,7 @@ function doadduser() {
          
          if(empty($acct)) {
          
-            header('location:register.php');
+            header('location:successlanding.php');
          
          }
          

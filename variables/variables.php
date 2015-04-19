@@ -32,4 +32,10 @@ $registermsg3 = 'Enter up to <b>five websites</b> or app servers to monitor. Won
 
 $registermsg1 = 'WontBlinkBox services are absolutely <b>FREE</b>.  Know immediately when a website or server is under-performing and say goodbye to costly gaps in site traffic or usability.';
 
+/* successful registration messages */
+
+$successmsg1 = 'Registration successful!!';
+
+$successmsg2 = 'Thank you for using WontBlinkBox services! Your registration was successful. A confirmation message has been sent to your email address. Please follow the instructions in the email to confirm registration and start monitoring!';
+
 ?>
