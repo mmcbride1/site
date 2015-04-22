@@ -1,13 +1,14 @@
 <?php
 
 include_once('inputmanager.php');
+include_once('includes/utilities/messenger.php');
 
 class UserAccount {
 
    /* login information */
 
    const HOST = "localhost";
-   const USER = "nuthinmuch";
+   const USER = "mattymain";
    const PASS = "administrator";
    const DATA = "wbbusers";
    const TABL = "members";
@@ -75,6 +76,41 @@ class UserAccount {
    }
 
    /**
+    * Generate random  
+    * key value to use
+    * as confirmation id
+    *
+    **/
+
+   function conf_key() {
+
+      $key = md5(uniqid(rand()));
+
+      return $key;
+
+   }
+
+   /**
+    * Send Confirmation
+    * message to user if
+    * all registration 
+    * requirements succeed
+    *
+    **/
+
+   function confirmation($to, $key) {
+
+      $mail = new Messenger();
+
+      $msg = $mail->conf['msg1'];
+
+      $mail->sendmail($to, "$msg=$key");
+
+      return;
+
+   }
+
+   /**
     * Carry out validation
     * checks on given input.
     * If acceptable, add user
@@ -90,19 +126,23 @@ class UserAccount {
       $st = $con['site'];
       $em = $con['mail'];
 
+      $key = $this->conf_key();
+
       $safe = new InputManager();
 
       $pw = $safe->escape($pw);
 
       $usr = "INSERT INTO members
 
-      (username, password, site, email)
+      (username, password, site, email, confirmation)
  
-      VALUES ('$un', '$pw', '$st', '$em')";
+      VALUES ('$un', '$pw', '$st', '$em', '$key')";
 
-      mysql_query($usr);                  
+      mysql_query($usr);
 
-   }           
+      $this->confirmation($em, $key);
+
+   }          
 
 }
 
