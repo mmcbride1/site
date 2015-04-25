@@ -8,7 +8,7 @@ class UserAccount {
    /* login information */
 
    const HOST = "localhost";
-   const USER = "mattymain";
+   const USER = "nuthinmuch";
    const PASS = "administrator";
    const DATA = "wbbusers";
    const TABL = "members";
@@ -114,8 +114,9 @@ class UserAccount {
     * Carry out validation
     * checks on given input.
     * If acceptable, add user
-    * to database as new user 
-    * account
+    * to tmp database as 
+    * new user account
+    * awaiting confirmation
     *
     **/
 
@@ -142,7 +143,95 @@ class UserAccount {
 
       $this->confirmation($em, $key);
 
-   }          
+   }
+
+   /**
+    * Register the user 
+    * information into
+    * the registration
+    * database as new 
+    * user account
+    *
+    **/
+
+   function register($cfm) {
+
+      $data = mysql_fetch_array($cfm);
+
+      $user = $data['username'];
+      $pass = $data['password'];
+      $mail = $data['email'];
+      $site = $data['site'];
+
+      $sql = "INSERT INTO registered_members 
+
+      (username, password, sites, email) 
+
+      VALUES ('$user', '$pass', '$site', '$mail')";
+
+      return mysql_query($sql);
+
+   }
+
+   /**
+    * Delete user info
+    * from tmp if 
+    * confirmation checks
+    * out properly
+    *
+    **/
+
+   function purgetmp($val) {
+
+      $sql = "DELETE FROM members
+
+      WHERE confirmation = '$val'";
+
+      mysql_query($sql);
+
+   }
+
+   /**
+    * Retrieve the value
+    * from the confimation
+    * email. If all checks 
+    * out register the user
+    * and delete the tmp
+    * information
+    *
+    **/
+
+   function confirmuserinfo() {
+
+      $passkey = $_GET['passkey'];
+
+      $sql = "SELECT * FROM members
+
+      WHERE confirmation = '$passkey'";
+
+      $rslt = mysql_query($sql);
+
+      $count = mysql_num_rows($rslt);
+
+      if($count == 1) {
+
+         if($this->register($rslt)) {
+
+            $this->purgetmp($passkey);
+
+         }
+
+         return 0;
+
+      }
+
+      else {
+
+         return 1;
+
+      }
+
+   } 
 
 }
 
