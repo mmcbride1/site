@@ -77,7 +77,9 @@ class InputManager {
 
    function redundantipt($input, $sqlval) {
 
-      $sql = "SELECT * from members WHERE $sqlval = '$input'";
+      $sql = "SELECT * from registered_members 
+
+      WHERE $sqlval = '$input'";
 
       $result = mysql_query($sql);
 

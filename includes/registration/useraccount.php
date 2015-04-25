@@ -8,7 +8,7 @@ class UserAccount {
    /* login information */
 
    const HOST = "localhost";
-   const USER = "nuthinmuch";
+   const USER = "mattymain";
    const PASS = "administrator";
    const DATA = "wbbusers";
    const TABL = "members";
@@ -165,7 +165,7 @@ class UserAccount {
 
       $sql = "INSERT INTO registered_members 
 
-      (username, password, sites, email) 
+      (username, password, site, email) 
 
       VALUES ('$user', '$pass', '$site', '$mail')";
 
