@@ -38,4 +38,10 @@ $successmsg1 = 'Registration successful!!';
 
 $successmsg2 = 'Thank you for using WontBlinkBox services! Your registration was successful. A confirmation message has been sent to your email address. Please follow the instructions in the email to confirm registration and start monitoring!';
 
+/* account activation messages */
+
+$activemsg1 = 'Welcome to WontBlinkBox! Your account has been activated. WontBlinkBox will monitor your sites and/or servers constantly, and update you whenever there is an issue in connection or performance. Our philosophy at WontBlinBox is FREE, QUICK and SIMPLE for companies or individuals who rely on optimal site performace, and need to know immediately when issues arise, or just want to get a grip on how things are perfoming.';
+
+$activemsg2 = 'There was a problem with your account activation. Either your account was previously activated or your information was not found in the system.';
+
 ?>
