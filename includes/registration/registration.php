@@ -242,8 +242,10 @@ class Registration {
       $url = $this->invalidsite();
 
       $usr = $this->config['user'];
+      $paz = $this->config['pass'];
       $web = $this->config['site'];
       $eml = $this->config['mail'];
+      $mln = $this->config['sitx'];
 
       $pas = $_POST['password'];
       $ras = $_POST['rassword'];
@@ -256,7 +258,7 @@ class Registration {
 
       else if(!$this->passwd()) {
 
-         return "invalid password";
+         return $paz;
 
       }
 
@@ -268,7 +270,7 @@ class Registration {
 
       else if(!empty($url)) {
 
-         return $web."\n".$url;
+         return $web."\n".$url.". ".$mln;
 
       }
 
