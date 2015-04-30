@@ -29,6 +29,20 @@ class UserAccount {
    }
 
    /**
+    * Record the date
+    * and time upon
+    * temporary 
+    * registration 
+    *
+    **/
+
+   function tmpdate() {
+
+      return date("Y-m-d H:i:s");
+
+   }
+
+   /**
     * Set the database
     * parameters for 
     * access
@@ -129,15 +143,17 @@ class UserAccount {
 
       $key = $this->conf_key();
 
+      $dt = $this->tmpdate();
+
       $safe = new InputManager();
 
       $pw = $safe->escape($pw);
 
       $usr = "INSERT INTO members
 
-      (username, password, site, email, confirmation)
+      (username, password, site, email, confirmation, date)
  
-      VALUES ('$un', '$pw', '$st', '$em', '$key')";
+      VALUES ('$un', '$pw', '$st', '$em', '$key', '$dt')";
 
       mysql_query($usr);
 
