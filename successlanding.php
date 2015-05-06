@@ -1,5 +1,7 @@
 <head>
 
+<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
 </head>

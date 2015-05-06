@@ -44,24 +44,43 @@ width:1060px;
 height:40px;
 border-bottom:1px solid #ccc;
 background-color:#000000;
-font-family:"Trebuchet MS", Helvetica, sans-serif;
+font-family:'Play', sans-serif;
 color:#FFFFFF;
+
+}
+
+#nav p {
+
+display:inline;
+
+}
+
+#nav ul {
+
+padding: 8px 0px;
+margin: 0px;
+display:inline;
+
+}
+
+#nav li {
+
+display: inline;
+float:right;
 
 }
 
 #nav a {
 
-display:inline;
-padding:10px;
-text-decoration:none;
-background-color:#f1f1f1;
+text-decoration: none;
+color: orange;
+padding: 8px 8px;
 
 }
 
 #nav a:hover {
 
-background-color:#bababa;
-height:80px;
+color: blue;
 
 }
 
