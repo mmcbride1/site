@@ -57,30 +57,30 @@ display:inline;
 
 #nav ul {
 
-padding: 8px 0px;
-margin: 0px;
+padding:8px 0px;
+margin:0px;
 display:inline;
 
 }
 
 #nav li {
 
-display: inline;
+display:inline;
 float:right;
 
 }
 
 #nav a {
 
-text-decoration: none;
-color: orange;
-padding: 8px 8px;
+text-decoration:none;
+color:orange;
+padding:8px 8px;
 
 }
 
 #nav a:hover {
 
-color: blue;
+color:#9900CC;
 
 }
 
