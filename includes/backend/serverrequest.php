@@ -104,7 +104,7 @@ class ServerRequest {
 
       if($this->getcode() == 1) {
 
-         return $msg->server($this->buildmsg());     
+         return $msg->appout($this->buildmsg());     
 
       }
 

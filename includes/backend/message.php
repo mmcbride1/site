@@ -106,7 +106,7 @@ class Message {
     *
     **/
 
-   public function appsrvout($msg) {
+   public function appout($msg) {
 
       return $this->msgheader()."The request to the server produced the following data:\n\n $msg".$this->msgfooter();
 
