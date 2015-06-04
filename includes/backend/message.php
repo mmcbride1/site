@@ -1,6 +1,6 @@
 <?php
 
-class Messages {
+class Message {
 
    /* hold address */
 
@@ -52,7 +52,7 @@ class Messages {
    
    public function msgfooter() {
    
-      return "Please verify the status of this address and/or notify your administrator!"
+      return "Please verify the status of this address and/or notify your administrator!";
    
    }
    
@@ -78,7 +78,7 @@ class Messages {
    
    public function resp($c) {
    
-      return $this->msgheader()."This site is currently responding with http code: \"$code\"\n\n".$this->msgfooter();
+      return $this->msgheader()."This site is currently responding with http code: \"$c\"\n\n".$this->msgfooter();
 
    
    }
@@ -93,7 +93,7 @@ class Messages {
    
    public function tcrq($t, $c) {
    
-      return $this->msgheader()."This site is currently posting a response time of $time seconds with http code: \"$code\"\n\n".$this->msgfooter();
+      return $this->msgheader()."This site is currently posting a response time of $t seconds with http code: \"$c\"\n\n".$this->msgfooter();
    
    
    }

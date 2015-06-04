@@ -1,7 +1,6 @@
 <?php
 
 include('pingserv.php');
-include('message.php');
 include('messenger.php');
 
 class ServerRequest {

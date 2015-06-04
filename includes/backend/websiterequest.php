@@ -116,27 +116,29 @@ class WebsiteRequest {
 
       $hold = $this->cfg['hold'];
 
+      $http = $this->extcode();
+
       $rqst = $this->req->gettime();
 
       $time = ($rqst > $hold);
 
-      $code = ($this->extcode() != NULL);
+      $code = ($http != NULL);
 
       if($time && !$code) {
 
-         return $this->alert()->load($time);
+         return $this->alert()->load($rqst);
 
       }
 
       else if(!$time && $code) {
 
-         return $this->alert()->resp($code);
+         return $this->alert()->resp($http);
 
       }
 
       else if($time && $code) {
 
-         return $this->alert()->tcrq($time, $code)
+         return $this->alert()->tcrq($rqst, $http);
 
       }
 

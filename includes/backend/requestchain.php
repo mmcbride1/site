@@ -1,6 +1,8 @@
 <?php
 
 include('useraccount.php');
+include('websiterequest.php');
+include('serverrequest.php');
 
 class RequestChain {
 
@@ -196,6 +198,8 @@ class RequestChain {
     **/
 
    private function baseloop() {
+
+      $limit = $this->limit;
 
       $r = $this->range();
 
