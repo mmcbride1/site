@@ -197,7 +197,7 @@ class RequestChain {
     *
     **/
 
-   private function baseloop() {
+   public function baseloop() {
 
       $limit = $this->limit;
 
