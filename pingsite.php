@@ -11,16 +11,56 @@ class PingSite {
    /**
     * Constructor 
     *
-    * Initalize the
-    * user site address
+    * Allow for 
+    * multiple object
+    * initializations 
     **/
 
-   public function __construct($addr) {
+   public function __construct() {
+
+      $arg = func_get_args();
+
+      $num = func_num_args();
+
+      if(method_exists($this, $f='__construct'.$num)) {
+
+         $all = array($this, $f);
+
+         call_user_func_array($all, $arg);
+
+      }
+
+   }
+
+   /**
+    * Constructor1
+    *
+    * Initalize the
+    * user site address
+    * on the frontend
+    **/
+
+   public function __construct1($addr) {
 
       $this->http = $addr;
       $this->conf = $this->getcf();
       $this->curl = $this->getheader();
       $this->window();
+
+   }
+
+   /**
+    * Constructor2
+    *
+    * Initalize the
+    * user site address
+    * on the backend
+    **/
+
+   public function __construct2($addr, $flag) {
+
+      $this->http = $addr;
+      $this->curl = $this->getheader();
 
    }
 

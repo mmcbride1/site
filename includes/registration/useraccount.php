@@ -8,7 +8,7 @@ class UserAccount {
    /* login information */
 
    const HOST = "localhost";
-   const USER = "mattymain";
+   const USER = "nuthinmuch";
    const PASS = "administrator";
    const DATA = "wbbusers";
    const TABL = "members";

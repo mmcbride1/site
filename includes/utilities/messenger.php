@@ -17,7 +17,7 @@ class Messenger {
     * 
     **/
 
-   function __construct() {
+   public function __construct() {
 
       $this->conf = $this->config();
 
@@ -32,7 +32,7 @@ class Messenger {
     *
     **/
 
-   function config() {
+   public function config() {
 
       $send = parse_ini_file("message.ini");
 
@@ -41,22 +41,36 @@ class Messenger {
    }
 
    /**
-    * Send an email 
-    * take the destination 
-    * address and the 
-    * message as an argument
+    * Set the message
+    * headers, take the
+    * subject as an 
+    * argument
     *
     **/
 
-   function sendmail($to, $msg) {
+   private function reqhead($to, $subj) {
 
       $headers = array(
 
          'From'    => $this->conf['from'],
          'To'      => $to,
-         'Subject' => $this->conf['sub1'] 
+         'Subject' => $subj
 
       );
+
+      return $headers;
+
+   }
+
+   /**
+    * Create the mail 
+    * object and set 
+    * the necessary 
+    * parameters
+    *
+    **/
+
+   private function fctry() {
 
       $smtp = Mail::factory('smtp', array(
 
@@ -67,6 +81,29 @@ class Messenger {
          'password' => $this->conf['pass']
 
       ));
+
+      return $smtp;
+
+   }
+
+   /**
+    * Send an email 
+    * take the destination 
+    * address, the message 
+    * and the subject 
+    * as an argument
+    *
+    **/
+
+   public function sendmail($to, $msg, $subin=NULL) {
+
+      $wwwsb = $this->conf['sub1'];
+
+      $subj = ($subin == NULL) ? $wwwsb : $subin;
+
+      $headers = $this->reqhead($to, $subj);
+
+      $smtp = $this->fctry();
 
       $mail = $smtp->send($to, $headers, $msg);
 
