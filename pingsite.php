@@ -60,6 +60,7 @@ class PingSite {
    public function __construct2($addr, $flag) {
 
       $this->http = $addr;
+      $this->conf = $this->getcf();
       $this->curl = $this->getheader();
 
    }
