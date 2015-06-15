@@ -2,7 +2,6 @@
 
 include('pingsite.php');
 include('message.php');
-include('messenger.php');
 
 class WebsiteRequest {
 
@@ -36,7 +35,22 @@ class WebsiteRequest {
 
    private function conf() {
 
-      return parse_ini_file('request.ini');
+      return parse_ini_file('expr.ini');
+
+   }
+
+   /**
+    * Logging 
+    *
+    **/
+
+   private function logdata() {
+
+      $log = new AppLog();
+
+      $adr = $this->req->geturli();
+
+      $log->request_log($adr, $msg);
 
    }
 
@@ -124,7 +138,15 @@ class WebsiteRequest {
 
       $code = ($http != NULL);
 
-      if($time && !$code) {
+      if($http == $this->req->conf['code']) {
+
+         $this->logdata($this->cfg['log2']);
+
+         return;
+
+      }
+
+      else if($time && !$code) {
 
          return $this->alert()->load($rqst);
 

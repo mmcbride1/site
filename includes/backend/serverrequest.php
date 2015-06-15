@@ -1,13 +1,13 @@
 <?php
 
 include('pingserv.php');
-include('messenger.php');
 
 class ServerRequest {
 
    /* request info */
 
    var $ping;
+   var $cfg;
 
    /**
     * Construct
@@ -20,6 +20,48 @@ class ServerRequest {
    public function __construct($addr) {
 
       $this->ping = new PingServ($addr, 1);
+
+      $this->cfg = $this->conf();
+
+   }
+
+   /**
+    * Set 
+    * configuration
+    * parameters
+    *
+    **/
+
+   private function conf() {
+
+      return parse_ini_file('expr.ini');
+
+   }
+
+   /**
+    * Get the 
+    * assigned address
+    *
+    **/
+
+   private function ip() {
+
+      $ip = 'ip';
+
+      return $this->ping->$ip;
+
+   }
+
+   /**
+    * Logging
+    *
+    **/
+
+   private function logdata($msg) {
+
+      $log = new AppLog();
+
+      $log->request_log($this->ip(), $msg);
 
    }
 
@@ -98,9 +140,17 @@ class ServerRequest {
 
    public function monitor() {
 
-      $ip = 'ip';
+      $ip = $this->ip();
 
       $msg = $this->msgt($ip);
+
+      if($this->getcode() > 1) {
+
+         $this->logdata($this->cfg['log1']);
+
+         return;
+
+      }
 
       if($this->getcode() == 1) {
 
