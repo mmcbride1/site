@@ -301,6 +301,12 @@ class Registration {
 
       $usr = new UserAccount();
 
+      if(!$usr->access()) {
+
+         return "connection failure!";
+
+      }
+
       if($this->ruseript('name', 'username')) {
 
          return "username already exists";

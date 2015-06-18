@@ -50,7 +50,7 @@ class TableManager {
 
       $sql = "DELETE FROM members 
 
-      WHERE DATEDIFF(date, '$now') >= 3";
+      WHERE DATEDIFF('$now', date) >= 3";
 
       mysql_query($sql);
 

@@ -5,6 +5,10 @@ include_once('includes/utilities/messenger.php');
 
 class UserAccount {
 
+   /* connection */
+
+   var $success;
+
    /* login information */
 
    const HOST = "localhost";
@@ -24,7 +28,20 @@ class UserAccount {
 
    function __construct() {
 
-      $this->connect();
+      $this->success = $this->connect();
+
+   }
+
+   /**
+    * Did the DB
+    * connection
+    * succeed ?
+    *
+    **/
+
+   function access() {
+
+      return $this->success;
 
    }
 
@@ -81,11 +98,15 @@ class UserAccount {
       $p = $db['pass'];
       $d = $db['data'];
 
-      mysql_connect("$h", "$u", "$p");
+      $c = mysql_connect("$h", "$u", "$p");
 
-      mysql_select_db("$d")
+      if($c) {
 
-      or die ("DATABASE UNAVAILABLE");      
+         mysql_select_db("$d");
+
+      }
+
+     return $c
 
    }
 
