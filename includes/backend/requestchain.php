@@ -3,6 +3,7 @@
 include('useraccount.php');
 include('websiterequest.php');
 include('serverrequest.php');
+include('applog.php');
 
 class RequestChain {
 
@@ -22,6 +23,14 @@ class RequestChain {
    public function __construct() {
 
       $conn = new UserAccount();
+
+      if(!$conn->access()) {
+
+         $log = new AppLog();
+
+         $log->database_log();
+
+      }
 
    }
 

@@ -106,7 +106,7 @@ class UserAccount {
 
       }
 
-     return $c
+     return $c;
 
    }
 

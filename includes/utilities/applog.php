@@ -123,6 +123,25 @@ class AppLog {
 
       return;
 
+   }
+
+   /**
+    * For database connections:
+    * log any issues with 
+    * the connection
+    *
+    **/
+
+   public function database_log() {
+
+      $msg = "DATABASE CONNECTION FAILURE";
+
+      $out = $this->logmsg($msg);
+
+      $this->logfile($out);
+
+      return;
+
    } 
 
 }

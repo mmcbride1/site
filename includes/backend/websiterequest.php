@@ -44,7 +44,7 @@ class WebsiteRequest {
     *
     **/
 
-   private function logdata() {
+   private function logdata($msg) {
 
       $log = new AppLog();
 
