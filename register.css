@@ -121,6 +121,16 @@ outline:3px solid #000000;
 
 }
 
+#loginbox {
+
+position:absolute;
+border:15px solid #FFFF00;
+top:10px;
+left:10px;
+outline:3px solid #000000;
+
+}
+
 #regbox1 {
 
 position:absolute;
