@@ -2,7 +2,7 @@
 
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC" style="outline: 1px solid #9900CC">
 <tr>
-<form name="login-form" method="post" action="confirmlogin.php">
+<form name="login-form" method="post">
 <td>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
@@ -11,7 +11,7 @@
 <tr>
 <td width="78">username</td>
 <td width="6">:</td>
-<td width="294"><input name="name" type="text" id="name"></td>
+<td width="294"><input name="username" type="text" id="username"></td>
 </tr>
 <tr>
 <td width="78">password</td>
@@ -28,4 +28,19 @@
 </form>
 </tr>
 </table>
+</div>
+
+<div id="login">
+
+<?php
+
+include('inputmanager.php');
+include('useraccount.php');
+
+$validate = new InputManager();
+
+$validate->confirm_login();
+
+?>
+
 </div>

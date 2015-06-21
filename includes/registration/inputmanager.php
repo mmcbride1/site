@@ -87,6 +87,62 @@ class InputManager {
 
       return ($count > 0);
 
+   }
+
+   /**
+    *
+    *
+    **/
+
+   function confirm_login() {
+
+      session_start();
+
+      $tabl = "registered_members";
+
+      if(isset($_POST['username'])) {
+
+         ob_start();
+
+         $con = new UserAccount();
+
+         $username = $_POST['username'];
+         $password = $_POST['password'];
+
+         $sql = "SELECT * FROM $tabl 
+         WHERE username ='$username'
+         AND password = '$password'";
+
+         $rslt = mysql_query($sql);
+         $exst = mysql_num_rows($rslt);
+
+         if($exst == 1) {
+
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+
+            header("location:/wbboxsvc/userlanding.php");
+
+         }
+
+         else {
+
+            echo '<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>';
+            echo '<script>';
+            echo '$(document).ready(function() {';
+            echo '$("#login").load("loginfail.php");';
+            echo '$.ajaxSetup({ cache: false });';
+            echo '});';
+            echo '</script>';
+
+         }
+
+      }
+
+      ob_flush();
+
+      return;
+
    }           
 
 }
