@@ -4,6 +4,8 @@
 
 <title>Login</title>
 
+<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="register.css" media="screen" />
 
 </head>
