@@ -232,3 +232,12 @@ padding:10px;
 font-family:'Play', sans-serif;
 
 }
+
+#login h2 {
+
+position:absolute;
+padding:10px;
+top:170px;
+color:red;
+
+}
