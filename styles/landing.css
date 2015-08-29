@@ -1,0 +1,53 @@
+#landing-content {
+
+position:relative;
+width:675px;
+height:450px;
+float:left;
+padding:60px;
+
+}
+
+#landing-content h2 {
+
+position:absolute;
+top:0px;
+left:0px;
+padding:5px;
+
+}
+
+#landing-content select {
+
+padding:10px;
+margin:-5px -20px -5px -5px;
+border:solid red 1px;
+overflow:hidden;
+
+}
+
+#greeting {
+
+position:absolute;
+right:120px;
+
+}
+
+#add-container {
+
+position:absolute;
+left:300px;
+top:250px;
+
+}
+
+#add-container h2 {
+
+position:absolute;
+top:0px;
+right:0px;
+color:red;
+
+}
+
+

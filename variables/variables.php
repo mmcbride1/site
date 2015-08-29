@@ -44,4 +44,10 @@ $activemsg1 = 'Welcome to WontBlinkBox! Your account has been activated. WontBli
 
 $activemsg2 = 'There was a problem with your activation. Either your account has been previously activated or your information was not found in the system. Please try re-registering. We would love to have you. If still no luck, you may notify support at wbbsupport@gmail.com and we will be sure to get you started!';
 
+/* activation */
+
+$inactive = "YOUR ACCOUNT IS CURRENTLY INACTIVE";
+
+$active = "YOUR ACCOUNT IS CURRENTLY ACTIVE";
+
 ?>
