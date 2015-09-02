@@ -23,8 +23,25 @@
          return false;
       
       }
+
+      else {
+
+         if(confirm("are you sure?")) {
+
+            return true;
+
+         }
+
+         else {
+
+            return false;
+
+         }
+
+      }
       
    }
+
 </script>
 
 <div id="checkbox">

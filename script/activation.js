@@ -20,11 +20,9 @@ $(document).ready(function() {
 
       else {return false;}
 
-      }
-
       if (bool) {
 
-         $('currentstate').html("");
+         $('#currentstate').html("YOUR ACCOUNT IS CURRENTLY INACTIVE");
 
          $(this).val("activate");
 
@@ -32,7 +30,7 @@ $(document).ready(function() {
 
       else if ($(this).val() == "activate") {
 
-         $('currentstate').html("");
+         $('#currentstate').html("YOUR ACCOUNT IS CURRENTLY ACTIVE");
 
          $(this).val("deactivate");
 

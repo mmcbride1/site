@@ -21,9 +21,9 @@ class Registration {
      * validate user input 
      **/
 
-   function __construct() {
+   public function __construct() {
 
-      $this->inputmanager = new InputManager();
+      $this->inputmanager = new Validator();
 
       $this->config = $this->configuration();
 
@@ -36,7 +36,7 @@ class Registration {
      * post array
      **/
 
-   function userinfo() {
+   public function userinfo() {
 
       return $_POST;
 
@@ -51,7 +51,7 @@ class Registration {
      * 
      **/
 
-   function badinput() {
+   public function badinput() {
 
       return $this->validation;
 
@@ -64,7 +64,7 @@ class Registration {
      * 
      **/
 
-   function configuration() {
+   private function configuration() {
 
       $f = "includes/expr.ini";
 
@@ -80,7 +80,7 @@ class Registration {
      * 
      **/
 
-   function passwd() {
+   public function passwd() {
 
       $pass = $_POST['password'];
 
@@ -98,7 +98,7 @@ class Registration {
      * 
      **/
 
-   function username() {
+   public function username() {
 
       $correctformat = $this->inputmanager;
 
@@ -118,7 +118,7 @@ class Registration {
      * 
      **/
 
-   function ruseript($inpt, $val) {
+   public function ruseript($inpt, $val) {
 
       $origformat = $this->inputmanager;
 
@@ -135,7 +135,7 @@ class Registration {
      * 
      **/
 
-   function usermail() {
+   public function usermail() {
 
       $mail = $_POST['mail'];
 
@@ -156,7 +156,7 @@ class Registration {
      * 
      **/
 
-   function sites() {
+   public function sites() {
 
       $addr = $_POST['site'];
 
@@ -179,31 +179,6 @@ class Registration {
    }
 
     /**
-     * Assure site
-     * to-be-monitored
-     * given by user is
-     * valid and is of
-     * proper format
-     * 
-     **/
-
-   function usersite($inpt) {
-
-      $exp1 = $this->config['reg1'];
-
-      $exp2 = $this->config['reg2'];
-
-      $ok = preg_match($exp1, $inpt) 
-
-      || preg_match($exp2, $inpt);
-
-      $ip = filter_var($inpt, FILTER_VALIDATE_IP);
-
-      return ($ok || $ip);
-
-   }  
-
-    /**
      * Return a list of
      * all, if any of user
      * sites-to-be-monitored
@@ -212,7 +187,7 @@ class Registration {
      * 
      **/
 
-   function invalidsite() {
+   public function invalidsite() {
 
       $base = "";
 
@@ -237,7 +212,7 @@ class Registration {
      * 
      **/
 
-   function validate() {
+   private function validate() {
 
       $url = $this->invalidsite();
 
@@ -297,7 +272,7 @@ class Registration {
      * 
      **/
 
-   function adduseraccount() {
+   public function adduseraccount() {
 
       $usr = new UserAccount();
 

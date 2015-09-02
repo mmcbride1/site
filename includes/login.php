@@ -34,10 +34,10 @@
 
 <?php
 
-include('inputmanager.php');
+include('validator.php');
 include('useraccount.php');
 
-$validate = new InputManager();
+$validate = new Validator();
 
 $validate->confirm_login();
 

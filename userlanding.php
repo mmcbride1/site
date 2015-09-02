@@ -2,7 +2,7 @@
 
    session_start();
    
-   include('userOption.php');
+   include('useroption.php');
    
    /**
     * Get the current
@@ -53,7 +53,7 @@
          
             echo '<h3>';
             echo '<script>';
-            echo 'document.write("");';
+            echo 'document.write("PLACEHOLDER");';
             echo '</script>';
             echo '</h3>'; 
          
@@ -99,7 +99,7 @@
       
             include('includes/header.php');
          
-            include('include/nav.php');
+            include('includes/nav.php');
          
             include('variables/variables.php');
          
@@ -129,9 +129,7 @@
                
                   include('includes/checkboxform.php');
                   
-                  $addopt = $option->addsite($_POST['new-site']);
-                  
-                  addsiteform($addopt);
+                  addsiteform($option->addsite($_POST['new-site']));
                
                }
                
@@ -145,7 +143,7 @@
                
                   echo $option->echonlysite();
                   
-                  addsiteform($addopt);
+                  addsiteform($option->addsite($_POST['new-site']));
                
                }            
             
@@ -157,9 +155,9 @@
             
                <h3>Account Status</h3>
                
-               <?php if($option->state() == 0) { ?>
+               <?php if($option->status() == 0) { ?>
                
-               <div id="currentstate"><?php echo $incative ?></div>
+               <div id="currentstate"><?php echo $inactive ?></div>
                
                <input type="button" id="opt" value="activate">
                
@@ -189,7 +187,7 @@
 
    /* collect sites for deletion */
    
-   $list = $_POST['delete-list'];
+   $list = $_POST['delete_list'];
 
    if(!empty($list)) {
    

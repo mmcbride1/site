@@ -1,6 +1,38 @@
 <?php
 
-class InputManager {
+class Validator {
+
+   /* configuration */
+
+   var $config;
+
+   /**
+    * Construct
+    *
+    * Set configuration
+    *
+    **/
+
+   public function __construct() {
+
+      $this->config = $this->configuration();
+
+   }
+
+   /**
+    * Parse the
+    * configuration
+    * file
+    *
+    **/
+
+   private function configuration() {
+
+      $f = "includes/expr.ini";
+
+      return parse_ini_file($f);
+
+   }
 
     /**
      * Assure the input
@@ -10,7 +42,7 @@ class InputManager {
      * 
      **/
 
-   function nameformt($name) {
+   public function nameformt($name) {
 
       $ok = preg_match("/^\w{8,20}$/", $name);
 
@@ -25,7 +57,7 @@ class InputManager {
      * 
      **/
 
-   function escape($input) {
+   public function escape($input) {
 
       $sql = mysql_real_escape_string($input);
 
@@ -41,7 +73,7 @@ class InputManager {
      * 
      **/
 
-   function clean($input) {
+   public function clean($input) {
 
       $sql = $this->escape($input);
 
@@ -58,11 +90,35 @@ class InputManager {
      * 
      **/
 
-   function passwdchk($input) {
+   public function passwdchk($input) {
 
       $req = strlen($input);
 
       return ($req >= 8 && $req <= 20);
+
+   }
+
+   /**
+    * Give best 
+    * attempt to 
+    * assure given
+    * address is valid
+    *
+    **/
+
+   public function usersite($inpt) {
+
+      $exp1 = $this->config['reg1'];
+
+      $exp2 = $this->config['reg2'];
+
+      $ok = preg_match($exp1, $inpt)
+
+      || preg_match($exp2, $inpt);
+
+      $ip = filter_var($inpt, FILTER_VALIDATE_IP);
+
+      return ($ok || $ip);
 
    }
 
@@ -75,7 +131,7 @@ class InputManager {
      * 
      **/
 
-   function redundantipt($input, $sqlval) {
+   public function redundantipt($input, $sqlval) {
 
       $sql = "SELECT * from registered_members 
 
@@ -90,11 +146,12 @@ class InputManager {
    }
 
    /**
-    *
+    * Confirm user
+    * login
     *
     **/
 
-   function confirm_login() {
+   public function confirm_login() {
 
       session_start();
 

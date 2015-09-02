@@ -81,7 +81,7 @@ class UserOption {
     *
     **/
     
-   private function state() {
+   public function state() {
    
       return $this->stat;
    
@@ -120,7 +120,7 @@ class UserOption {
     *
     **/
     
-    private function acct_status_select() {
+    public function status() {
     
        $sql = "SELECT active FROM
        
@@ -188,7 +188,7 @@ class UserOption {
     
    public function updstate() {
     
-      $tg = ($this->state() == 0) ? 1 : 0;
+      $tg = ($this->status() == 0) ? 1 : 0;
       
       $sql = "UPDATE registered_members
       
@@ -236,7 +236,7 @@ class UserOption {
     
        $diff = array_diff($this->site, $list);
        
-       $namestr = implode(",", $list);
+       $namestr = implode(",", $diff);
        
        $sql = "UPDATE registered_members
        

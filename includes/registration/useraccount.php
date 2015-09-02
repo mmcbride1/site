@@ -1,6 +1,6 @@
 <?php
 
-include_once('inputmanager.php');
+include_once('validator.php');
 include_once('includes/utilities/messenger.php');
 
 class UserAccount {
@@ -166,7 +166,7 @@ class UserAccount {
 
       $dt = $this->tmpdate();
 
-      $safe = new InputManager();
+      $safe = new Validator();
 
       $pw = $safe->escape($pw);
 
