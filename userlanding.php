@@ -38,6 +38,8 @@
     **/
     
    function addsiteform($obj) {
+
+      include('variables/variables.php');
    
       echo "<div id='add-container'>";
       echo "<form id='add-site' method='post'>";
@@ -53,7 +55,7 @@
          
             echo '<h3>';
             echo '<script>';
-            echo 'document.write("PLACEHOLDER");';
+            echo 'document.write("'.$invalid2.'");';
             echo '</script>';
             echo '</h3>'; 
          
@@ -100,8 +102,6 @@
             include('includes/header.php');
          
             include('includes/nav.php');
-         
-            include('variables/variables.php');
          
             $option = new UserOption(username());  
       

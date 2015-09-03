@@ -50,4 +50,8 @@ $inactive = "YOUR ACCOUNT IS CURRENTLY INACTIVE";
 
 $active = "YOUR ACCOUNT IS CURRENTLY ACTIVE";
 
+/* add site validation */
+
+$invalid2 = 'Please enter a valid website or ip address.';
+
 ?>
