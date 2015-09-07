@@ -12,7 +12,7 @@ class UserAccount {
    /* login information */
 
    const HOST = "localhost";
-   const USER = "nuthinmuch";
+   const USER = "mattymain";
    const PASS = "administrator";
    const DATA = "wbbusers";
    const TABL = "members";
