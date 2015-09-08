@@ -11,11 +11,7 @@ class UserAccount {
 
    /* login information */
 
-   const HOST = "localhost";
-   const USER = "mattymain";
-   const PASS = "administrator";
-   const DATA = "wbbusers";
-   const TABL = "members";
+   var $sql;
 
    /**
     * Construct
@@ -28,7 +24,24 @@ class UserAccount {
 
    function __construct() {
 
+      $this->sql = $this->config();
+
       $this->success = $this->connect();
+
+   }
+
+   /**
+    * Collect the 
+    * connection login
+    * information
+    *
+    **/
+
+   private function config() {
+
+      $f = "db.ini";
+
+      return parse_ini_file($f);
 
    }
 
@@ -70,11 +83,11 @@ class UserAccount {
 
       $con = array(
 
-      'host' => self::HOST,
-      'user' => self::USER,
-      'pass' => self::PASS,
-      'data' => self::DATA,
-      'tabl' => self::TABL
+      'host' => $this->sql['HOST'],
+      'user' => $this->sql['USER'],
+      'pass' => $this->sql['PASS'],
+      'data' => $this->sql['DATA'],
+      'tabl' => $this->sql['TABL']
 
       );
 
