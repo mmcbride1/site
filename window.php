@@ -76,8 +76,6 @@ if($t > 7) {
 
 <?php include('includes/explain.php') ?>
 
-<?php session_destroy(); ?>
-
    </body>
 
 </html>
