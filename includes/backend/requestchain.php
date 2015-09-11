@@ -130,7 +130,9 @@ class RequestChain {
 
       registered_members WHERE
 
-      id >= $min AND id < $lim";
+      id >= $min AND id < $lim
+
+      AND active = 1";
 
       $rst = mysql_query($sql);
 
