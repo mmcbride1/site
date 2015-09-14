@@ -37,8 +37,6 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <div id="content">
 
-<h2>Ping your website or app server</h2>
-
 <?php include('includes/quickbox.php'); ?>
 
 </div> <!-- end #content -->

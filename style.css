@@ -86,6 +86,7 @@ color:#9900CC;
 
 #content {
 
+position:relative;
 width:675px;
 height:250px;
 float:left;
@@ -111,12 +112,26 @@ font-size:75%;
 
 }
 
-#box {
+#box fieldset {
 
-position:relative;
-top:-50px;
-right:240px;
+position:absolute;
+top:0px;
+left:0px;
 margin-bottom:25px;
+font-family: Arial,Helvetica,sans-serif;
+width: 40px;
+background-color: #66B360;
+color:#ffffff;
+
+}
+
+#login-failed {
+
+position:absolute;
+left:50px;
+bottom:-79px;
+padding:10px;
+color:red;
 
 }
 

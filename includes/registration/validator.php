@@ -187,7 +187,7 @@ class Validator {
             echo '<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>';
             echo '<script>';
             echo '$(document).ready(function() {';
-            echo '$("#login").load("loginfail.php");';
+            echo '$("#login-failed").load("loginfail.php");';
             echo '$.ajaxSetup({ cache: false });';
             echo '});';
             echo '</script>';

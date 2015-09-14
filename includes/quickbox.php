@@ -17,31 +17,35 @@
 
 <div id="box">
 
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-<form name="form1" method="post">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>enter web/ip address</strong></td>
-</tr>
-<tr>
-<td width="78">URL</td>
-<td width="6">:</td>
-<td width="294"><input name="url" type="text" id="url"></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="ping" onclick="wait('spinner');"></td>
-</tr>
-</table>
-</td>
-</form>
-</tr>
-</table>
+<fieldset>
 
-</div><!-- end #box -->
+<h4>enter web/ip address</h4>
+
+<form name="pingbox" method="post">
+
+URL: <input name="url" type="text" id="url">
+
+<br></br>
+
+<input type="submit" name="Submit" value="ping!" onclick="wait('spinner');">
+
+</form>
+
+<form action="http://localhost/wbboxsvc/register.php">
+
+<h4>Long Term Monitoring</h4>
+
+<input type="submit" value="sign up!"></td> or:
+
+</form>
+
+<h4>Log In</h4>
+
+<?php include('includes/login.php'); ?>
+
+</fieldset>
+
+</div>
 
 <?php
 
@@ -165,3 +169,5 @@
 <h1><?php takeoff(); ?></h1>
 
 </div>
+
+
