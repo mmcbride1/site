@@ -193,7 +193,7 @@ class Registration {
 
       foreach($this->sites() as $s) {
 
-         if(!$this->usersite($s)) {
+         if(!$this->inputmanager->usersite($s)) {
 
             $base .= $s.", \n";
 

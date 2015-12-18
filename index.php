@@ -19,6 +19,10 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      <script src="script/slideshow.js"></script>
+
 <title>WontBlinkBox</title>
 
 <link rel="shortcut icon" href="images/favicon.ico" />
@@ -35,13 +39,15 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <?php include('includes/nav.php'); ?>
 
+<?php include('includes/sidebar.php'); ?>
+
 <div id="content">
 
 <?php include('includes/quickbox.php'); ?>
 
-</div> <!-- end #content -->
+<?php include('includes/frontpagegrid.php'); ?>
 
-<?php include('includes/sidebar.php'); ?>
+</div> <!-- end #content -->
 
 <?php include('includes/noscript.php'); ?>
 

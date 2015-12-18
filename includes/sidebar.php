@@ -2,18 +2,22 @@
 
 <div id="sidebar">
 
-<h4><?php echo $purpose ?></h4>
+   <fieldset>
 
-<h3><img src="images/star.png" style="width:30px;height:28px">
+      <h4>Log In</h4>
 
-<?php
+      <?php include('includes/login.php'); ?>
 
-if(empty($_SESSION['username'])) { 
+   </fieldset>
+   
+   <div id="hostbx-primary">
+   
+      <div id="hostbx-secondary">
+      
+         <?php include('includes/hostlist.php') ?>
+      
+      </div>
+   
+   </div>
 
-include('includes/signup.php');
-
-}
-
-?>
-
-</div><!-- #end sidebar -->
+</div>

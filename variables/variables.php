@@ -54,4 +54,8 @@ $active = "YOUR ACCOUNT IS CURRENTLY ACTIVE";
 
 $invalid2 = 'Please enter a valid website or ip address.';
 
+/* front page grid */
+
+$signup = 'You can SIGN UP to have either or both of these tests run on a regular basis. Receive email alerts whenever an endpoint becomes unreachable or things are not performing up to par. WontBlinkBox uses dedicated servers, optimized for networking, to keep watch on your hosts 24/7. WontBlinkBox services are absolutely FREE.';
+
 ?>

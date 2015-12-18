@@ -1,58 +1,9 @@
-<link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="spin.css" media="screen" />
+<?php 
 
-<script type="text/javascript">
-
-    function wait(target) {
-
-       document.getElementById('takeoff').style.visibility = 'hidden';
-
-       document.getElementById(target).style.display = 'block';
-
-       return false;
-
-    }
-
-</script>
-
-<div id="box">
-
-<fieldset>
-
-<h4>enter web/ip address</h4>
-
-<form name="pingbox" method="post">
-
-URL: <input name="url" type="text" id="url">
-
-<br></br>
-
-<input type="submit" name="Submit" value="ping!" onclick="wait('spinner');">
-
-</form>
-
-<form action="http://localhost/wbboxsvc/register.php">
-
-<h4>Long Term Monitoring</h4>
-
-<input type="submit" value="sign up!"></td> or:
-
-</form>
-
-<h4>Log In</h4>
-
-<?php include('includes/login.php'); ?>
-
-</fieldset>
-
-</div>
-
-<?php
-
-  include('pingsite.php');
-  include('pingserv.php');
-
-  /*
+   include('pingsite.php');
+   include('pingserv.php');
+   
+   /*
    * Parse the conf
    * file that lists
    * the regular 
@@ -65,7 +16,7 @@ URL: <input name="url" type="text" id="url">
      return parse_ini_file('expr.ini');
 
   }
-
+  
   /*
    * Check if entry
    * argument is a
@@ -79,7 +30,7 @@ URL: <input name="url" type="text" id="url">
      return $v;
 
   }
-
+  
   /*
    * Check if entry
    * argument is a 
@@ -120,14 +71,10 @@ URL: <input name="url" type="text" id="url">
 
   function takeoff() {
 
-     /* start session */
-
-     session_start();
-
      /* grab posted address */
 
      if(isset($_POST['url'])) {
- 
+
         $url = $_POST['url'];
 
         if(isip($url)) {
@@ -155,19 +102,66 @@ URL: <input name="url" type="text" id="url">
         $_SESSION['web'] = $web;
 
     }
-   
-  }
 
+  }
+   
 ?>
 
-<div id="spinner" class="spinner" style="display:none;">
+<link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="spin.css" media="screen" />
+
+<script src="script/spinner.js"></script>
+
+<div id="box">
+
+   <fieldset>
+
+      <div id="pingboxtest">
+      
+         <h4 style='color:yellow;'>Perform Test</h4>
+         
+         <h5>Enter web/ip address</h5>
+         
+         <form name="pingbox" method="post">
+         
+            URL: <input name="url" type="text" id="url">
+            
+            <br></br>
+            
+            <input type="submit" name="Submit" value="ping!" onclick="wait('spinner');"> 
+
+         </form>
+
+      </div>
+      
+      <br></br>
+      
+      <div id="pingboxmonitor">
+      
+         <form action="http://localhost/wbboxsvc/register.php">
+         
+            <h4>Long Term Monitoring</h4>
+
+            <input type="submit" value="sign up!"></td>
+            
+         </form>   
+      
+      </div>
+      
+      <?php include('includes/slideshow.php'); ?>
+
+   </fieldset>
+
+</div>
+
+<div id="spinner" class="spinner-loader" style="display:none">
+
+   <!-- #none -->
 
 </div>
 
 <div id="takeoff">
 
-<h1><?php takeoff(); ?></h1>
+   <h1><?php takeoff(); ?></h1>
 
 </div>
-
-

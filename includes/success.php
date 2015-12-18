@@ -2,16 +2,16 @@
 
 <div id="successmessage">
 
-<h1><?php echo $successmsg1; ?></h1>
+   <h1><?php echo $successmsg1.' '; ?><span><img src="images/success.png" align="middle" style="width:75px;height:75px"></span></h1>
 
-<img src="images/success.jpg" style="width:75px;height:75px">
+   <h3><?php echo $successmsg2; ?></h3>
 
-<br></br>
+   <br></br>
 
-<h2><?php echo $successmsg2; ?></h2>
+   <form action="http://localhost/wbboxsvc/index.php">
 
-<br></br>
+      <input type="submit" value="Back to WontBlinkBox">
 
-<a href="http://localhost/wbboxsvc/index.php">Back to WontBlinkBox</a> 
+   </form>
 
 </div>

@@ -16,21 +16,17 @@ function activate() {
 
    if($active == 0) {
 
-      echo '<h2>ACCOUNT ACTIVATED</h2>';
+      echo '<h3>ACCOUNT ACTIVATED</h3>';
 
-      echo '<br></br>';
-
-      echo "<h3>$activemsg1</h3>";
+      echo "<h4>$activemsg1</h4>";
 
    }
 
    else {
 
-      echo '<h2>PROBLEM WITH ACTIVATION</h2>';
+      echo '<h3>PROBLEM WITH ACTIVATION</h3>';
 
-      echo '<br></br>';
-
-      echo "<h3>$activemsg2</h3>";
+      echo "<h4>$activemsg2</h4>";
 
    }
 
@@ -40,6 +36,12 @@ function activate() {
 
 <div id="activeacct">
 
-<?php activate() ?>
+   <?php activate() ?>
 
-</div> <!-- end #activeacct -->
+   <form action="http://localhost/wbboxsvc/index.php">
+
+      <input type="submit" value="Sign in at WontBlinkBox">
+
+   </form>
+
+</div> 
