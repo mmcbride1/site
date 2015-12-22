@@ -4,7 +4,7 @@
 
 <div id="regbox1">
 
-<p><?php echo $registermsg1 ?></p>
+<p><?php echo $signupmsg1 ?></p>
 
 <img src="images/regstr3.jpg" style="width:75px;height:75px">
 
@@ -12,7 +12,7 @@
 
 <div id="regbox2">
 
-<p><?php echo $registermsg2 ?></p>
+<p><?php echo $signupmsg2 ?></p>
 
 <img src="images/regstr1.jpeg" style="width:75px;height:75px">
 
@@ -20,7 +20,7 @@
 
 <div id="regbox3">
 
-<p><?php echo $registermsg3 ?></p>
+<p><?php echo $signupmsg3 ?></p>
 
 <img src="images/regstr2.jpeg" style="width:75px;height:75px">
 

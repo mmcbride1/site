@@ -24,13 +24,21 @@ $purpose = 'Use a remote source, optimized for networking, to send requests to y
 
 $invalid = 'Please enter a valid website address, or to ping your server, enter a valid ip address.';
 
+/* carosel messages */
+
+$registermsg2 = '<b>Sign up</b> to have your website or app server monitored on a regular basis.';
+
+$registermsg3 = 'Enter up to <b>five websites</b> or app servers to monitor.';
+
+$registermsg1 = 'WontBlinkBox services are absolutely <b>FREE</b>.';
+
 /* registration messages */
 
-$registermsg2 = '<b>Sign up</b> to have your website or app server monitored on a regular basis. <b>Receive email updates</b> whenever site responses are slow or your application server becomes unreachable.';
+$signupmsg2 = '<b>Sign up</b> to have your website or app server monitored on a regular basis. <b>Receive email updates</b> whenever site responses are slow or your application server becomes unreachable.';
 
-$registermsg3 = 'Enter up to <b>five websites</b> or app servers to monitor. WontBlinkBox will track these addresses without rest 24 hours a day, 7 days a week.';
+$signupmsg3 = 'Enter up to <b>five websites</b> or app servers to monitor. WontBlinkBox will track these addresses without rest 24 hours a day, 7 days a week.';
 
-$registermsg1 = 'WontBlinkBox services are absolutely <b>FREE</b>.  Know immediately when a website or server is under-performing and say goodbye to costly gaps in site traffic or usability.';
+$signupmsg1 = 'WontBlinkBox services are absolutely <b>FREE</b>.  Know immediately when a website or server is under-performing and say goodbye to costly gaps in site traffic or usability.';
 
 /* successful registration messages */
 
@@ -57,5 +65,11 @@ $invalid2 = 'Please enter a valid website or ip address.';
 /* front page grid */
 
 $signup = 'You can SIGN UP to have either or both of these tests run on a regular basis. Receive email alerts whenever an endpoint becomes unreachable or things are not performing up to par. WontBlinkBox uses dedicated servers, optimized for networking, to keep watch on your hosts 24/7. WontBlinkBox services are absolutely FREE.';
+
+/* front page table */
+
+$ping = 'Ping your application or webserver by entering the host IP address. The PING test will determine if the host is reachable across the Internet.';
+
+$web = 'Request data from your website by entering the web address. The RESPONSE test will determine the rate at which the website is responding and whether the website is reachable across the Internet.';
 
 ?>
