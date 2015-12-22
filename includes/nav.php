@@ -6,11 +6,7 @@
 
    <ul>
 
-      <?php if(empty($_SESSION['username'])) { ?>
-
-      <li><a href="loginlanding.php">Log In</a></li>
-
-      <?php } else { ?>
+      <?php if(!empty($_SESSION['username'])) { ?>
 
       <li><a href="includes/logout.php">Log Out</a></li>
 
@@ -18,7 +14,7 @@
 
       <?php } ?>
 
-      <li><a href="index.php">Ping</a></li> 
+      <li><a href="index.php">Ping</a></li>
 
    </ul>
 
