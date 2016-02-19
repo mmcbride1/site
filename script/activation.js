@@ -22,7 +22,7 @@ $(document).ready(function() {
 
       if (bool) {
 
-         $('#currentstate').html("YOUR ACCOUNT IS CURRENTLY INACTIVE");
+         $('#currentstate').html("<h4>Your account is currently INACTIVE</h4>");
 
          $(this).val("activate");
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
       else if ($(this).val() == "activate") {
 
-         $('#currentstate').html("YOUR ACCOUNT IS CURRENTLY ACTIVE");
+         $('#currentstate').html("<h4>Your account is currently ACTIVE</h4>");
 
          $(this).val("deactivate");
 

@@ -1,35 +1,39 @@
 #takeoff {
 
-width:380px;
+width:400px;
 background-color:#f8f8f8;
-position: relative;
-right: -300px;
-bottom: 200px;
-border-top: 2px solid black;
-border-bottom: 2px solid black;
-border-left: 2px solid black;
-border-right: 2px solid black;
-border-style: dashed;
-margin-left: auto;
-margin-right: auto;
+position:absolute;
+right:50px;
+border-top:2px solid black;
+border-bottom:2px solid black;
+border-left:2px solid black;
+border-right:2px solid black;
+border-radius:15px;
+margin-left:auto;
+margin-right:auto;
+padding-top:0.25cm;
+padding-bottom:0.25cm;
 display:inline-block;
+z-index:3;
 
 }
 
 #ping {
 
-width:380px;
+width:400px;
 background-color:#f8f8f8;
-position: relative;
-right: -300px;
-bottom: 200px;
-border-top: 5px solid black;
-border-bottom: 5px solid black;
-border-left: 5px solid black;
-border-right: 5px solid black;
-border-style: dashed; 
-margin-left: auto;
-margin-right: auto;
+position:relative;
+right:-300px;
+bottom:200px;
+border-top:5px solid black;
+border-bottom:5px solid black;
+border-left:5px solid black;
+border-right:5px solid black;
+border-radius:15px;
+margin-left:auto;
+margin-right:auto;
+padding-top:0.25cm;
+padding-bottom:0.25cm;
 display:inline-block;
 
 }
@@ -38,60 +42,60 @@ display:inline-block;
 
 margin-left: auto;
 margin-right: auto;
-padding-left: 0.05cm;
+padding-left: 0.5cm;
 
 }
 
 #timemsg h3 {
 
-position: relative;
-bottom: 10px;
-font-family: "Arial Black", Gadget, sans-serif;
-font-style: italic;
-font-size: 80%;
-padding-left: 0.05cm;
+position:relative;
+bottom:10px;
+font-family:"Arial Black", Gadget, sans-serif;
+font-style:italic;
+font-size:80%;
+padding-left:0.5cm;
 
 }
 
 #stats h1 {
 
 font-size: 80%;
-font-family: ‘Arial Black’, Gadget, sans-serif;
-padding-left: 0.05cm;
+font-family:‘Arial Black’, Gadget, sans-serif;
+padding-left:0.5cm;
 
 }
 
 #explain p {
 
-position: relative;
-bottom: -5px;
-font-size: 50%;
-padding-left: 0.05cm;
+position:relative;
+bottom:-5px;
+font-size:50%;
+padding-left:0.5cm;
 
 }
 
 #tips h3 {
 
-position: relative;
-bottom: 2px;
-font-size: 80%;
-font-style: italic;
-color: #FF6633;
-padding-left: 0.05cm;
+position:relative;
+bottom:2px;
+font-size:80%;
+font-style:italic;
+color:#FF6633;
+padding-left:0.5cm;
 
 }
 
 #stats p {
 
-color: #b0c4de;
-font-weight: bold;
+color:#b0c4de;
+font-weight:bold;
 
 }
 
 #pingstat h3 {
 
-font-size: 75%;
-font-family: "Courier New", Courier, monospace;
-padding-left: 0.05cm;
+font-size:75%;
+font-family:"Courier New", Courier, monospace;
+padding-left:0.5cm;
 
 }

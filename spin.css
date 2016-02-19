@@ -1,8 +1,8 @@
 #spinner {
 
-position: relative;
-right: -450px;
-bottom: 100px;
+position:absolute;
+left:460px;
+top:80px;
 
 }
 
@@ -11,38 +11,38 @@ bottom: 100px;
 width:380px;
 background-color:#f8f8f8;
 position: relative;
-right: -300px;
-bottom: 200px;
-border-top: 2px solid black;
-border-bottom: 2px solid black;
-border-left: 2px solid black;
-border-right: 2px solid black;
+right:-300px;
+bottom:200px;
+border-top:2px solid black;
+border-bottom:2px solid black;
+border-left:2px solid black;
+border-right:2px solid black;
 border-style:groove;
-margin-left: auto;
-margin-right: auto;
+margin-left:auto;
+margin-right:auto;
 display:inline-block;
 
 }
 
 #invalid h3 {
 
-position: relative;
-margin-left: auto;
-margin-right: auto;
-font-family: "Courier New", Courier, monospace;
-font-size: 65%;
-padding-left: 0.05cm;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+font-family:"Courier New", Courier, monospace;
+font-size:65%;
+padding-left:0.05cm;
 
 }
 
 #invalid p {
 
-position: relative;
-margin-left: auto;
-margin-right: auto;
-font-family: "Comic Sans MS", cursive, sans-serif;
-font-size: 45%;
-padding-left: 0.05cm;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size:45%;
+padding-left:0.05cm;
 
 }
 
@@ -54,25 +54,25 @@ margin:0 auto;
 margin-bottom:1px;
 border-bottom:1px solid #ccc;
 border-top:1px solid #ccc;
-font-family: Impact, Charcoal, sans-serif;
-font-size: 150%;
-background-color: #FF0000;
+font-family:Impact, Charcoal, sans-serif;
+font-size:150%;
+background-color:#FF0000;
 
 }
 
 #iheader h4 {
 
-position: relative;
-bottom: 15px;
-font-size: 50%;
-padding-left: 0.05cm;
+position:relative;
+bottom:15px;
+font-size:50%;
+padding-left:0.05cm;
 
 }
 
 #iheader img {
 
-position: absolute;
-top: 0px;
-right: 0px;
+position:absolute;
+top:0px;
+right:0px;
 
 }
