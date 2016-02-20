@@ -211,6 +211,14 @@ class UserOption {
     **/
     
    public function checkbox() {
+
+      if (count($this->site) == 1) {
+
+         echo $this->echonlysite();
+
+      }
+
+      else {
     
       foreach($this->site as $s) {
       
@@ -219,10 +227,12 @@ class UserOption {
          name="delete_list[]" 
 
          value="'.$s.'"> '.$s.'<br>';
+
+              }
          
          }
       
-   } 
+    } 
     
    /**
     * Remove the given
