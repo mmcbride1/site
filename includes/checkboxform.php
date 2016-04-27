@@ -50,12 +50,20 @@
    
    <form name="remove" method="post" onsubmit="return checkList()">
    
-   <?php echo $option->checkbox(); ?>
+   <?php $v = $option->checkbox(); ?>
    
    <br></br>
-   
-   <input type="submit" value="remove address">
-   
+
+   <?php
+
+   if ($v == 0) {
+
+      echo "<input type='submit' value='remove address'>";
+
+   }
+
+   ?>
+
    </form>
    
 </div>

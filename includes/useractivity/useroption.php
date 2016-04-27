@@ -216,6 +216,8 @@ class UserOption {
 
          echo $this->echonlysite();
 
+         return 1;
+
       }
 
       else {
@@ -229,6 +231,8 @@ class UserOption {
          value="'.$s.'"> '.$s.'<br>';
 
               }
+
+         return 0;
          
          }
       
