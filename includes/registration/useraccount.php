@@ -242,6 +242,47 @@ class UserAccount {
    }
 
    /**
+    * For forgot password
+    * vslidate email address
+    * and send link to user
+    *
+    **/
+
+   function fgtpasswdconf($email) {
+
+      $sql = "SELECT * FROM 
+
+      registered_members WHERE 
+
+      email = '$email'";
+
+      $rslt = mysql_query($sql);
+
+      if (mysql_num_rows($rslt) == 1) {
+
+         $mail = new Messenger();
+
+         $msg = $mail->conf['msg2'];
+
+         $mail->sendmail($email, $msg);
+
+         return;
+
+      }
+
+      else {
+
+         if (isset($email)) {
+
+         echo '<h1>PROBLEM WITH ENTRY</h1>';
+
+         }
+
+      }
+
+   }
+
+   /**
     * Retrieve the value
     * from the confimation
     * email. If all checks 

@@ -10,7 +10,7 @@ password: <input name="password" type="password" id="password">
 
 <br></br>
 
-<a href="" style="position:absolute;font-size:10px">forgot password?</a>
+<a href="http://localhost/wbboxsvc/forgotpasswdlanding.php" style="position:absolute;font-size:10px">forgot password?</a>
 
 <br></br>
 
