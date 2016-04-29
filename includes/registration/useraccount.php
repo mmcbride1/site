@@ -250,6 +250,10 @@ class UserAccount {
 
    function fgtpasswdconf($email) {
 
+      $safe = new Validator();
+
+      $email = $safe->escape($email);
+
       $sql = "SELECT * FROM 
 
       registered_members WHERE 
@@ -278,6 +282,39 @@ class UserAccount {
 
          }
 
+      }
+
+   }
+
+   /**
+    *
+    **/
+
+   function changepasswd($ps1, $ps2) {
+
+      $v = $_GET['fpemail'];
+
+      $sql = "UPDATE registered_members
+
+      SET password = '$ps2' WHERE
+
+      email = '$v'";
+
+      if ($ps1 == $ps2) {
+
+         mysql_query($sql);
+
+      }
+
+      else {
+
+       if (isset($ps1) && isset($ps2)) {
+
+         echo '<h1>PASSWORDS DO NOT MATCH</h1>';
+
+
+         }
+    
       }
 
    }
