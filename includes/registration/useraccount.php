@@ -268,7 +268,7 @@ class UserAccount {
 
          $msg = $mail->conf['msg2'];
 
-         $mail->sendmail($email, $msg);
+         $mail->sendmail($email, "$msg=$email");
 
          return;
 
@@ -292,7 +292,7 @@ class UserAccount {
 
    function changepasswd($ps1, $ps2) {
 
-      $v = $_GET['fpemail'];
+      $v = $_GET['email'];
 
       $sql = "UPDATE registered_members
 

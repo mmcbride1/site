@@ -37,3 +37,22 @@
 </table>
 
 </div><!-- end #box -->
+
+<?php
+
+$ps1 = $_POST['fppassword'];
+$ps2 = $_POST['fprassword'];
+
+?>
+
+<div id="changepasswdrtn">
+
+<?php include('includes/registration/useraccount.php');
+
+$connect = new UserAccount();
+
+$fgtpasswd = $connect->changepasswd($ps1, $ps2);
+
+?>
+
+</div>
