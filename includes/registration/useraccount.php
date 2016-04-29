@@ -287,16 +287,20 @@ class UserAccount {
    }
 
    /**
-    *
+    * Change password
     **/
 
    function changepasswd($ps1, $ps2) {
 
       $v = $_GET['email'];
 
-      $sql = "UPDATE registered_members
+      $safe = new Validator();
 
-      SET password = '$ps2' WHERE
+      $pass = $safe->escape($ps2);
+      
+      $sql = "UPDATE registered_members
+      
+      SET password = '$pass' WHERE
 
       email = '$v'";
 
