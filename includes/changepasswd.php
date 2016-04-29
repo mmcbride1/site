@@ -11,11 +11,6 @@
 <td colspan="3" bgcolor="yellow" style="outline: 1px solid black"><strong><font color="#F3C">Reset Password</font></strong></td>
 </tr>
 <tr>
-<td width="78">email</td>
-<td width="6">:</td>
-<td width="294"><input name="fpemail" type="text" id="name"></td>
-</tr>
-<tr>
 <td width="78">new password</td>
 <td width="6">:</td>
 <td width="294"><input name="fppassword" type="password" id="fppassword"></td>

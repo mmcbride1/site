@@ -300,21 +300,20 @@ class UserAccount {
 
       email = '$v'";
 
-      if ($ps1 == $ps2) {
+      if (isset($ps1) && isset($ps2)) {
 
-         mysql_query($sql);
+         if ($ps1 == $ps2) {
 
-      }
-
-      else {
-
-       if (isset($ps1) && isset($ps2)) {
-
-         echo '<h1>PASSWORDS DO NOT MATCH</h1>';
-
+            mysql_query($sql);
 
          }
+
+         else {
+
+            echo '<h1>PASSWORDS DO NOT MATCH</h1>';
     
+         }
+
       }
 
    }
