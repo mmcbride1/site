@@ -10,6 +10,8 @@
 
 <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 
+<base href="http://localhost/wbboxsvc/">
+
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
 </head>
