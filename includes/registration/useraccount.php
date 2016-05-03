@@ -270,7 +270,7 @@ class UserAccount {
 
          $mail->sendmail($email, "$msg=$email");
 
-         return;
+         return 1;
 
       }
 
@@ -306,16 +306,30 @@ class UserAccount {
 
       if (isset($ps1) && isset($ps2)) {
 
+         if ($ps1 != $ps2) {
+
+            echo '<h1>PASSWORDS DO NOT MATCH</h1>';
+
+            return;
+
+         }
+
+         if (!$safe->passwdchk($ps2)) {
+
+            echo '<h1>INVALID PASSWORD: 8-20 CHARACTERS</h1>';
+
+            return;
+
+         }
+
          if ($ps1 == $ps2) {
 
             mysql_query($sql);
 
-         }
+            echo '<h1>PASSWORD CHANGED SUCCESSFULLY!</h1>';
 
-         else {
+            return;
 
-            echo '<h1>PASSWORDS DO NOT MATCH</h1>';
-    
          }
 
       }

@@ -2,7 +2,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/var/www/html/wbboxsvc/style.css" media="screen" />
 
 </head>
 

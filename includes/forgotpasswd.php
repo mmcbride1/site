@@ -42,6 +42,8 @@ $connect = new UserAccount();
 
 $fgtpasswd = $connect->fgtpasswdconf($email);
 
+if ($fgtpasswd == 1) {header("Location: http://localhost/wbboxsvc/index.php");}
+
 ?>
 
 </div>
