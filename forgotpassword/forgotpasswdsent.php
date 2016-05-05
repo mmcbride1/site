@@ -26,9 +26,23 @@
 
 <div id="content">
 
-<h2>A LINK SENT TO YOUR EMAIL</h2>
+<h2>A LINK HAS BEEN SENT TO YOUR EMAIL</h2>
+
+<h4>Please visit this link to create a new password!</h4>
+
+<div id="forgotpass-continue-button1">
+
+<form action="http://localhost/wbboxsvc/index.php">
+
+    <input type="submit" value="Continue">
+
+</form>
 
 </div>
+
+</div>
+
+<?php include('includes/footer.php'); ?>
 
 </div>
 
