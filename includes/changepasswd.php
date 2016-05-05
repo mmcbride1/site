@@ -48,6 +48,12 @@ $connect = new UserAccount();
 
 $fgtpasswd = $connect->changepasswd($ps1, $ps2);
 
+if ($fgtpasswd == 1) {
+
+   header("Location: http://localhost/wbboxsvc/index.php");
+
+}
+
 ?>
 
 </div>

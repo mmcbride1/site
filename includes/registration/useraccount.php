@@ -328,7 +328,7 @@ class UserAccount {
 
             echo '<h1>PASSWORD CHANGED SUCCESSFULLY!</h1>';
 
-            return;
+            return 1;
 
          }
 
