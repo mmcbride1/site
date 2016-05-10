@@ -44,7 +44,7 @@ $fgtpasswd = $connect->fgtpasswdconf($email);
 
 if ($fgtpasswd == 1) {
 
-   header("Location: http://localhost/wbboxsvc/forgotpassword/forgotpasswdsent.php");
+   header("Location: http://localhost/wbboxsvc/forgotpassword/forgotpasswdconfirmed.php");
 
 }
 

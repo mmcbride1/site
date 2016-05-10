@@ -38,9 +38,23 @@
 
 ?>
 
+<head>
+
+<script>
+
+function closeMe() {
+ 
+    open(location, '_self').close();
+
+}
+
+</script>
+
 </head>
 
    <body>
+
+<input type="button" class="btn btn-success" style="font-weight:bold;color:red;position:absolute;bottom:5;right:5;" value="x" onclick="closeMe();"></input>
 
       <!--<div id="wrapper">-->
 
