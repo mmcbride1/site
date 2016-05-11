@@ -40,9 +40,11 @@
 
 <head>
 
+<!--<link rel="stylesheet" type="text/css" href="style.css" media="screen" />-->
+
 <script>
 
-function closeMe() {
+function closewindow() {
  
     open(location, '_self').close();
 
@@ -54,7 +56,11 @@ function closeMe() {
 
    <body>
 
-<input type="button" class="btn btn-success" style="font-weight:bold;color:red;position:absolute;bottom:5;right:5;" value="x" onclick="closeMe();"></input>
+<div id="close">
+
+<input type="button" class="btn btn-success" value="x" onclick="closewindow();"></input>
+
+</div>
 
       <!--<div id="wrapper">-->
 

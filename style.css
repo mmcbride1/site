@@ -503,6 +503,16 @@ font-size:14px;
 
 }
 
+#close .btn,.btn-success {
+
+font-weight:bold;
+color:red;
+position:absolute;
+bottom:5;
+right:5;
+
+}
+
 #footer {
 
 clear:both;
