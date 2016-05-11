@@ -1,5 +1,21 @@
 <?php include('variables/variables.php') ?>
 
+<head>
+
+<script>
+
+function closewindow() {
+ 
+    open(location, '_self').close();
+
+}
+
+</script>
+
+</head>
+
+<body>
+
 <div id="invalid">
 
 <div id="iheader">
@@ -14,4 +30,12 @@
 
 <p><?php echo $invalid ?></p>
 
+<!--<div id="close">-->
+
+<input type="button" class="btn btn-success" value="x" onclick="closewindow();"></input>
+
+<!--</div>-->
+
 </div> <!-- end #invalid -->
+
+</body>
