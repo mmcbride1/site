@@ -154,6 +154,33 @@ font-family: "Play",sans-serif;
 
 }
 
+#pingboxtest-login {
+
+position:relative;
+border-radius:7px;
+width:300px;
+background-color:#FFF;
+top:-55%;
+right:-50%;
+overflow:auto;
+border:2px solid #39F;
+font-family:'Play', sans-serif;
+padding:10px;
+font-size:80%;
+margin:10px;
+background-color:#000;
+color:yellow;
+
+}
+
+#pingboxtest-login input[type=submit] {
+
+color:#39F;
+font-family:'Play', sans-serif;
+
+}
+
+
 #pingboxmonitor {
 
 border-radius:7px;

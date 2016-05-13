@@ -10,11 +10,7 @@
 
       <li><a href="includes/logout.php">Log Out</a></li>
 
-      <li><a href="userlanding.php">Manage Account</a></li>
-
       <?php } ?>
-
-      <li><a href="index.php">Ping</a></li>
 
    </ul>
 

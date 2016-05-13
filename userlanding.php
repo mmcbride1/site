@@ -179,6 +179,8 @@
                   <p>* Deactivation suspends monitroing services.<br>* Reactivate at any time.</p>
 
                </div>
+
+            <?php include('includes/pingbox.php'); ?>
             
             </div>
          
